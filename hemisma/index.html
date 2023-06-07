@@ -1,0 +1,4844 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        Agar biass quyi va variance yuqori bo’lsa qanday turdagi muammo sodir bo’lmoqda? 
+==== 
+# 
+Owerfitting 
+==== 
+Underfitting 
+==== 
+Bias ni quyi variance ni yuqoriligi mumamo hisoblanmaydi 
+==== 
+Model juda sodda 
+ 
++++++ 
+ 
+Model murakkab bo’lsa bias qanday bo’ladi? 
+==== 
+# 
+Quyi, model o’rgatuvchi tanlamaga mostlashib qoladi va train to’plamda xatoligi past bo’ladi ==== 
+To’g’ri javob yo’q 
+==== 
+Bias ning quyi yoki yuqori bo’lishi model murakkabligiga bog’liq emas. 
+==== 
+Yuqori, model o’rgatuvchi tanlamaga mostlashib qoladi va train to’plamda xatoligi yuqori bo’ladi 
+ 
++++++ 
+ 
+Model murakkab bo’lsa variance qanday bo’ladi? 
+==== 
+# 
+Yuqori, model o’rgatuvchi tanlamaga mostlashib qoladi va test to’plamda xatoligi yuqori bo’ladi ==== 
+Quyi, model o’rgatuvchi tanlamaga mostlashib qoladi va test to’plamda xatoligi past bo’ladi To’g’ri javob yo’q 
+==== 
+Variance ning quyi yoki yuqori bo’lishi model murakkabligiga bog’liq emas. 
+ 
++++++ 
+ 
+Underfitting bu - … 
+==== 
+# 
+Model juda soda. Shuning evaziga model train to’plamda ham, test to’plamda katta xatolik bo’lishiga olib keladi 
+==== 
+Model juda muakkab. Shuning evaziga model train to’plamda ham, test to’plamda katta xatolik bo’lishiga olib keladi 
+==== 
+Model juda soda. Shuning evaziga model train to’plamda yuqori, test to’plamda past xatolik bo’lishiga olib keladi 
+==== 
+Model juda muarkkab. Shuning evaziga model train to’plamda yuqori, test to’plamda past xatolik bo’lishiga olib keladi 
+ 
++++++ 
+ 
+Owerfitting bu - … 
+==== 
+# 
+Model juda muarkkab. Shuning evaziga model train to’plamda past, test to’plamda yuqori xatolik bo’lishiga olib keladi 
+==== 
+Model juda soda. Shuning evaziga model train to’plamda ham, test to’plamda katta xatolik bo’lishiga olib keladi 
+==== 
+Model juda muakkab. Shuning evaziga model train to’plamda ham, test to’plamda katta xatolik bo’lishiga olib keladi 
+Model juda soda. Shuning evaziga model train to’plamda yuqori, test to’plamda past xatolik bo’lishiga olib keladi 
+ 
++++++ 
+ 
+Logistik regressiya masalasida asosan qaysi aktivlashtirish funksiyasidan foydalaniladi? 
+==== 
+# 
+Sigmoid 
+==== Tanh 
+==== 
+ReLU 
+==== 
+Sigmoid va ReLU 
+ 
++++++ 
+ 
+Model qurishda bo’ladigan Underfitting muammosi qanday hal qilsa bo’ladi? 
+==== 
+# 
+Modelni murakkabligini oshirib ko’rish kerak 
+==== 
+Modelni murakkabligini pasaytirib  ko’rish kerak 
+==== 
+Bu muammoni hal qilishning imkoni yoq 
+==== 
+Datasetni hajmini kamaytirib ko’rish kerak 
+ 
++++++ 
+ 
+Model qurishda bo’ladigan Owerfitting muammosi qanday hal qilsa bo’ladi? 
+# 
+Modelni murakkabligini pasaytirib  ko’rish kerak 
+==== 
+Modelni murakkabligini oshirib ko’rish kerak 
+==== 
+Bu muammoni hal qilishning imkoni yoq 
+==== 
+Datasetni hajmini kamaytirib ko’rish kerak 
+ 
++++++ 
+ 
+O’rgatuvchi tanlama nima? 
+==== 
+# bu o’qitish uchun kerakli bo’lgan ma'lumotlar to'plamidir 
+==== bu o’qitish uchun kerakli bo’lgan neyronlar to'plamidir 
+==== bu o’qitish uchun kerakli bo’lgan og’irliklar to'plamidir 
+==== bu o’qitish uchun kerakli bo’lgan neyron tarmoq qatlamlar to'plamidir 
+ 
++++++ 
+ 
+O’ratuvchi tanlamadagi train to’plam … 
+==== 
+# modelni o’qitish uchun ishlatiladi 
+==== modelni testlash uchun ishlatiladi 
+==== 
+ 
+Modelni o’qitish davomida model parametrlarini sozlash uchun ishlatiladi 
+==== 
+Bu turdagi o’rgatuvchi tanlamadan foydalanilmaydi 
+ 
++++++ 
+ 
+O’ratuvchi tanlamadagi val (validation) to’plam bu? 
+==== 
+# 
+Modelni o’qitish davomida model parametrlarini sozlash uchun ishlatiladi 
+==== modelni o’qitish uchun ishlatiladi 
+==== 
+modelni testlash uchun ishlatiladi 
+==== 
+Bu turdagi o’rgatuvchi tanlamadan foydalanilmaydi 
+ 
++++++ 
+ 
+O’ratuvchi tanlamadagi test to’plam bu? 
+==== 
+# modelni testlash uchun ishlatiladi 
+==== 
+modelni o’qitish uchun ishlatiladi 
+==== 
+Modelni o’qitish davomida model parametrlarini sozlash uchun ishlatiladi 
+==== 
+Bu turdagi o’rgatuvchi tanlamadan foydalanilmaydi 
+ 
++++++ 
+ 
+O’rgatuvchi tanlamada normallashtirish tushunchasi bu? 
+==== 
+# 
+O’ratuvchi tanlamdagi qiymatlarni bir xil shkalaga o’tkazish 
+==== 
+O’ratuvchi tanlamdagi qiymatlarni turli xil shkalaga o’tkazish 
+==== 
+O’ratuvchi tanlamdagi qiymatlarni faqat [0,1] shkalaga o’tkazish 
+==== 
+O’ratuvchi tanlamdagi qiymatlarni faqat [-1,1] shkalaga o’tkazish 
+ 
++++++ 
+ 
+Nima uchun o’rgatuvchi tanlama normallashtiriladi? 
+==== 
+# 
+Obyektni xarakterlovchi xususiyatlari bir xil shkalaga olib kelish orqali ularning ta’sir kuchini barobarlashtirish 
+==== 
+Obyektni xarakterlovchi xususiyatlari faqat [0,1] shkalaga olib kelish orqali ularning ta’sir kuchini barobarlashtirish 
+==== 
+Obyektni xarakterlovchi xususiyatlari faqat [-1,1] shkalaga olib kelish orqali ularning ta’sir kuchini barobarlashtirish 
+==== 
+Obyektni xarakterlovchi xususiyatlari turli xil shkalaga olib kelish orqali ularning ta’sir kuchini barobarlashtirish 
+ 
++++++ 
+ 
+Validation dataset qayerda ishlatiladi? 
+==== 
+# 
+Modelni qurish davomida paramertlarni sozlashda 
+==== 
+Model qurib bo’linganidan so’ng aniqlikni baholashda 
+==== 
+To’g’ri javob yo’q 
+==== 
+Validation datasetdan foydalanilmaydi 
+ 
++++++ 
+ 
+Klasterlash bu ? 
+==== 
+# 
+O’qituvchisiz o’qitish algoritmi asosida obyektlarni xarakterlovchi o’xshash xususiyatlari asosida guruhlash 
+==== 
+O’qituvchili o’qitish algoritmi asosida obyektlarni xarakterlovchi o’xshash xususiyatlari asosida guruhlash ==== 
+Mashinali o’qitishda buday tushuncha yo’q. 
+==== 
+Logistik regressiya asosida amalga oshiriladigan mashinali o’qitish algoritmi 
+ 
++++++ 
+ 
+KNN algoritmida k qiymat nimani xaratterlaydi? 
+==== 
+# k ta eng yaqin qo’shnini 
+==== k ta eng uzoq qo’shnini 
+==== 
+O’qitish qadami 
+==== 
+O’qitishlar sonini 
+ 
++++++ 
+ 
+Uy narxini bashorat qilish uchun mashinali o’qitishning qaysi algoritmidan foydalanadi 
+==== 
+# 
+Chiziqli regressiya 
+==== 
+Logistik regressiya 
+==== 
+Kmeans 
+==== 
+SVM 
+ 
++++++ 
+ 
+Uyning xarakterlovchi xususiyatlari asosida ikkita guruhga(klasterga) (biznes, ekanom) ajratish uchun qaysi mashinali o’qitish algoritmidan foydalaniladi  
+==== 
+# 
+Kmeans 
+==== 
+SVM  
+==== 
+Random Forest  
+==== 
+Logistik regressiya 
+ 
++++++ 
+ 
+KNN algoritmida k ni kichik tanlasak nima sodir bo’ladi? 
+==== 
+# 
+Shovqinga sezgir bo’ladi va sinflashtirishda xatolikka ko’p uchrashi mumkin 
+==== 
+Shovqinga sezgir bo’lmaydi va sinflashtirishda xatolikka ko’p uchrashi mumkin 
+==== 
+KNN algoritmida k parametr yo’q. 
+==== k ni kichik yoki katta tanlash algoritm ishiga ta’sir qilmaydi 
+ 
++++++ 
+ 
+KNN algoritmida k ni katta tanlasak nima sodir bo’ladi? 
+==== 
+# 
+Model qurish vaqti oshib ketadi. Bazan k ning katta tanlanishi sinflashtirishda xatolikka ko’p uchrashi mumkin 
+==== 
+Shovqinga sezgir bo’ladi va sinflashtirishda xatolikka ko’p uchrashi mumkin 
+==== 
+KNN algoritmida k parametr yo’q. 
+==== k ni kichik yoki katta tanlash algoritm ishiga ta’sir qilmaydi 
+ 
++++++ 
+ 
+KNN algoritmida k ta eng yaqin qo’shni qanday aniqlanadi? 
+==== 
+# 
+To’plamdagi barcha elemetlar orasidagi masofa hisoblanib chiqiladi va eng yaqin k tasi tanlanadi ==== 
+Taxminiy random() funksiyasi orqali aniqlanadi 
+==== 
+To’plamdagi k ta elemetlar orasidagi masofa hisoblanib chiqiladi va ular o’sish tartibida saralanadi. ==== 
+KNN algoritmida k ta eng yaqin qo’shni tushunchasi yo’q. 
+ 
++++++ 
+ 
+SVM algorimi qaysi masalani yechish uchun xizmat qiladi? 
+==== 
+# 
+Sinflashtirsh  
+==== 
+Chiziqli regressiya 
+==== 
+Klasterlash 
+==== 
+Normallashtirish  
+ 
++++++ 
+ 
+KNN algoritmi qaysi masalani yechish uchun xizmat qiladi 
+==== 
+# 
+Barcha javob to’g’ri 
+==== 
+Sinflashtirish 
+==== 
+Regressiya 
+==== 
+Klasterlash 
+ 
++++++ 
+ 
+KMeans bu - 
+==== 
+# 
+O’qituvchisiz o’qitish algoritmi 
+==== 
+O’qituvchili o’qitish algoritmi 
+==== 
+O’zini o’zi o’qitadigan algoritmi 
+==== 
+to’g’ri javob yo’q  
+ 
++++++ 
+ 
+Kmaens algoritmi qaysi masalani yechish uchun xizmat qiladi 
+==== 
+# 
+Klasterlash 
+==== 
+Barcha javob to’g’ri 
+==== 
+Sinflashtirish 
+==== 
+Regressiya 
+ 
++++++ 
+ 
+Logistik regressiyada qaror qabul qilishimiz uchun modeldan olingan qiymat qaysi bo’sag’a qiymati orqali solishtiriladi? 
+==== 
+# 
+0.5 
+==== 
+0 
+==== 
+1 
+==== 
+-1 va 1 
+ 
++++++ 
+ 
+Nima uchun logistik regressiyada sigmoid funksiyadan foydalaniladi? 
+==== 
+# qiymatlarni (0,1) oraliqda keltirish 
+==== 
+qiymatlarni [-1,1] oraliqda keltirish 
+==== qiymatlarni [0,1] oraliqda keltirish 
+==== qiymatlarni (-1,1) oraliqda keltirish 
+ 
++++++ 
+ 
+Logistik regressiyada qaror chegrasi uchun topilgan modeldan  olingan qiymat qaysi bo’sag’a qiymati orqali solishtiriladi va qaror qabul qilinadi? 
+==== 
+# 
+0 
+==== 
+1 
+==== 
+0.5 
+==== 
+-1 va 1 
+ 
++++++ 
+ 
+SVM algoritmida suppor vectors bu? 
+==== 
+# 
+Sinflashtirishnig chegara sohasi bo’lib, eng yaqin tanlanmalar uni xarakterlaydi 
+==== 
+Sinflashtirishnig chegara sohasi bo’lib, eng uzoq tanlanmalar uni xarakterlaydi 
+==== 
+Sinflashtirishnig chegara sohasi bo’lib, eng yaqin tanlanmalar uni xarakterlamaydi 
+==== 
+Sinflashtirishnig chegara sohasi bo’lib, eng uzoq tanlanmalar uni xarakterlamaydi 
+ 
++++++ 
+ 
+SVM algoritmidagi hisoblaanadigan orqaliq (margin) qanday bo’lsa model ishonchli deb topiladi? 
+==== 
+# 
+Oraliq eng kattta bo’lsa 
+==== 
+Oraliq eng kichik bo’lsa 
+==== 
+Oraliq hech narsani anglatmaydi 
+==== 
+To’gri javob yo’q 
+ 
++++++ 
+ 
+SVM algoritmida yadro(kernel) funksiyalari nima uchun xizmat qiladi? 
+==== 
+# 
+Kiruvchi xususiyatlarni ma’lum o’lchov sohasidan boshqasiga o’zgartirish uchun xizmat qiladi. Misol uchun 1D -&gt; 2D 
+==== 
+Kiruvchi xususiyatlarni 1D o’lchov sohasidan 2D o’lchov sohasiga o’tkazish uchun xizmat qiladi ==== 
+Kiruvchi xususiyatlarni 2D o’lchov sohasidan 1D o’lchov sohasiga o’tkazish uchun xizmat qiladi 
+==== 
+Kiruvchi xususiyatlarni 2D o’lchov sohasidan 3D o’lchov sohasiga o’tkazish uchun xizmat qiladi 
+ 
++++++ 
+ 
+SVM orqali .. 
+==== 
+# 
+Faqat bir nechta  sinfga tegishli bo’lgan obyektlar sinflanadi 
+==== 
+Faqat ikkita sinfga tegishli bo’lgan obyektlar sinflanadi 
+==== 
+Faqat regressiya masalasini yechish mumkin 
+==== 
+Ham sinflashrish, ham regressiya masalasini ishlash mumkin. 
+ 
++++++ 
+ 
+Qidiruv tizimlarida sun’iy intellektdan foydalanish mumkinmi  
+==== 
+# ha, mumkin va hozirda keng qo‘llanilmoqda (misol uchun Google, Yandex qidiruv tizimlari) 
+==== qisman amaliy natijalari bor lekin yetarlicha nazariy jihatdan formallashtirilmagan 
+==== nazariy jihatdan mumkin, lekin hozircha amaliy jihatdan natijalarga erishilmagan 
+==== qidiruv tizimlarida sun’iy intellektdan foydalanish qidiruv vaqtini oshiradi 
+ 
++++++ 
+ 
+Mashinani o’qitish jarayonida ma’lumotlarga qanday dastlabki ishlov beriladi?  
+==== 
+# 
+Ma’lumotlar formatlari bir xillashtiriladi 
+==== 
+Ma’lumotlarni tozalash 
+==== 
+Ma’lumotlardan xususiyatlarni ajratish 
+==== 
+Barchasi to’g’ri 
+ 
++++++ 
+ 
+Sun’iy neyron tarmoqlarida perceptron tushunchasi? 
+==== 
+# 
+bu ikkita qatlamdan iborat ya’ni kiruvchi va chiquvchi qatlamdan iborat bo’lgan neyronni hisoblash tugunidir.  ==== 
+bu ikkita qatlamdan iborat ya’ni kiruvchi va faollashtish qatlamdan iborat bo’lgan neyronni hisoblash tugunidir.  ==== bu bir qatlamdan iborat bo’lgan neyronni hisoblash tugunidir. 
+==== bu uch qatlamdan iborat bo’lgan neyronni hisoblash tugunidir. 
+ 
++++++ 
+ 
+Sun’iy neyron tarmoqlarida yashirin qatlam  tushunchasi? 
+==== 
+# 
+Kiruvchi va chiquvchi qatlamlar orasida joylashadigan neyron  
+==== 
+Ko’rinmaydigan qatlam 
+==== 
+Neyron tarmoqda yashirin qatlam tushunchasi yo’q 
+==== 
+Kiruvchi qatlamdan kiyin keladigan barcha qatlamalar 
+ 
++++++ 
+ 
+Sun’iy neyron tarmoqlarida aktivlashtirish funksiyasi  tushunchasi? 
+==== 
+# 
+Neyron tugunlaridan chiqqan qiymatni ma’lum bir diapozonga tushirish uchun ishlatiladi 
+==== 
+Neyron tarmoqda aktivlashtirish funksiyasi tushunchasi yo’q 
+==== 
+Bu faol bo’lmagan tugunlarni faollashtish uchun ishlatiladi. 
+==== 
+To’g’ri javob yoq 
+ 
++++++ 
+ 
+Chuqur o’qitilish deyiladi, qachonki … 
+==== 
+# 
+Nayron tarmog’imizda yashirin qatlamlar soni bittadan ko’p bo’lsa. 
+==== 
+Nayron tarmog’imizda yashirin qatlamlar soni bitta bo’lsa. 
+==== 
+Ikkita neyron orasidagi masofa katta bo’lsa 
+==== 
+Neyronlar soni ikkitadan ko’p bo’lsa 
+ 
++++++ 
+ 
+Modelni o’qitish uchun o’quv tanlanma (dataset) qanday turlarga bo’lindi  
+==== 
+# training, validation, testing 
+==== 
+testing, value-x, training 
+==== validation, labels, training 
+==== labels, validation, testing 
+ 
++++++ 
+ 
+Python muhitida chiziqli regression model qurish uchun ishlatiladigan stats.linregress(x,y) funksiyasi nechta qiymat qaytaradi  
+==== 
+# 
+5 
+==== 
+4 
+==== 
+3 
+==== 
+2 
+ 
++++++ 
+ 
+O’qitish uchun ma’lumotlar orasidan ortiqcha yoki ahamiyati past bo’lgan, model turg’unligiga ta’sir qiluvchi ma’lumotlarni olib tashlash jarayoni nima deb ataladi  
+==== 
+# 
+Ma’lumotlarni tozalash (Data cleaning) 
+==== 
+Xususiyatlarni aniqlash (Feature detection) 
+==== 
+Ma’lumotlarni o’chirish (Data deletion) 
+==== 
+Ma’lumotlar turini aniqlash (Data formatting) 
+ 
++++++ 
+ 
+Neyron tarmoqlarida sinflashtirish masalasini yechishda chiquvchi qatlamda qaysi turdagi aktivlash funksiyasidan foydalaniladi 
+==== 
+# 
+Softmax 
+==== 
+Sigmoid 
+==== 
+ReLu 
+==== 
+To’g’ri javob yo’q 
+ 
++++++ 
+ 
+Logistik regression model nima uchun ishlatiladi 
+==== 
+# 
+Sinflashtirsh masalasini yechish uchun 
+==== 
+Klasterlash masalasini ishlash uchun 
+==== 
+Neyron tarmoqni qurish uchun 
+==== 
+Qiymatni bashoratlash uchun  
+ 
++++++ 
+ 
+Numpy kutubxonasidagi polyfit() funksiyasi nima uchun ishlatiladi? 
+==== 
+# 
+Chiziqli regressiya uchun model paramertlarini aniqlash uchun 
+==== 
+Loginstik  regressiya uchun model paramertlarini aniqlash uchun 
+==== 
+Chiziqli va logistik   regressiya uchun model paramertlarini aniqlash uchun 
+==== 
+Polynom funksiya yaratish uchun 
+ 
++++++ 
+ 
+Numpy kutubxonasidagi poly1d() funksiyasi nima uchun ishlatiladi? 
+==== 
+# 
+Berilgan parametrlar asosida polinomal  funksiya hosil qilish 
+==== 
+Berilgan parametrlar asosida polinomal  Class  hosil qilish 
+==== 
+Berilgan parametrlar asosida logistik regressiya modelini qurish 
+==== 
+Berilgan parametrlar asosida giperbolik  regressiya modelini qurish 
+ 
++++++ 
+ 
+Neyron tarmoqlarini qurishga mo’ljallangan python kutubxonalarini ko'rsating. 
+==== 
+# 
+Numpy, keras, tensorflow 
+==== 
+Numpy, pandas, keras 
+==== 
+Tensorflow, numpy, pandas 
+==== 
+Python, Matlab, Octave 
+ 
++++++ 
+ 
+Neyron tarmoq asosida sinflashtirish masalasini yechish mumkinmi?  
+==== 
+# 
+Ha 
+==== 
+Yoq, faqat regressiya masalasini yechadi. 
+==== 
+Faqat ikkilik sinflashtirganda 
+==== 
+Yoq, klasterlash masalasini yechadi. 
+ 
++++++ 
+ 
+Neyron tarmoqdagi tugun qiymati -5 ga teng. Ushbu tugun ReLU funksiyasi yordamida faollashtirilsa qanday qiymatga o‟zgaradi 
+==== 
+# 
+0 
+==== 
+44682 
+==== 
+5 
+ 
+-5 
+ 
++++++ 
+ 
+Neyron tarmoqdagi tugun qiymati 0 ga teng. Ushbu tugun sigmoid funksiyasi yordamida faollashtirilsa qanday qiymatga o’zgaradi 
+==== 
+# 
+0.5 
+==== 
+0 
+==== 
+1 
+==== 
+2.785661 
+ 
++++++ 
+ 
+Hozirgi kunda butun dunyoda rivojlanib borayotgan mashinali o’qitish (machine learning), chuqur o’qitish (deep learning) kabi usullar sun’iy intellekt bilan qanday bog’liq  
+==== 
+# 
+hozirda tasvirlardan ob’ektlarni tanib olish,  video nazorat, ovozni tanib olish kabi sohalarda keng foydalaniladi va sun’iy intellekt tizimini yaratishda katta ahamiyat kasb etadi 
+==== faqat ovozni tanib olishda ishlatiladi va sun’iy intellekt tizimini yaratishda deyarli fodalanilmaydi 
+==== tasvirlarni tanib olishda ishlatiladi va sun’iy intellekt tizimini yaratishda foydalaniladi 
+==== faqatgina ma’lumotlarning intellektual tahliliga oid 
+ 
++++++ 
+ 
+Mashinani o’qitish jarayonida ma’lumotlarga qanday dastlabki ishlov beriladi?  
+==== 
+# 
+Format, Data Cleaning, Feature Extraction 
+==== 
+Data Cleaning, Resizing, , Feature Extraction 
+==== 
+Resizing, Feature Extraction, Format 
+==== 
+Format, Resizing, Data Cleaning 
+ 
++++++ 
+ 
+Regression tahlilni qanday usullar asosida amalga oshiriladi.  
+==== 
+# chiziqli, nochiziqli va logistik regressiya usullari asosida 
+==== sintaktik usullar asosida 
+==== dinamik usillar asosida 
+==== semantik usullari asosida 
+ 
++++++ 
+ 
+Muammoni aniqlash, ma’lumotlarni tayyorlash, algoritmni ishlab chiqish va baholash, natijaviy ma’lumotlar aniqligini oshirish va yakuniy natijani taqdim qilish – bular qanday jarayonning bosqichlari hisoblanadi  
+==== 
+# 
+Mashinali o’qitish  
+Chuqur o’qitish 
+==== 
+Regression tahlil 
+==== 
+Statistik tahlil 
+ 
++++++ 
+ 
+Chuqur o’qitishning uchunchi bosqichi qanday jarayondan iborat?  
+==== 
+# 
+Chuqur o’qitish algoritmini belgilash. 
+==== 
+Modelni testlash. 
+==== 
+Muammoni tushunib olish. 
+==== 
+Modelni o’qitish. 
+ 
++++++ 
+ 
+Keras bu – ...  
+==== 
+# tensorflow asosiga qurilgan ochiq kodli neyron tarmoq uchun mo’ljallangan kutubxona 
+==== numpy asosiga qurilgan ochiq kodli neyron tarmoq uchun mo’ljallangan kutubxona 
+==== ochiq kodli neyron tarmoq uchun mo’ljallangan dasturiy vosita 
+==== matplotlib asosiga qurilgan ochiq kodli neyron tarmoq uchun mo’ljallangan kutubxona +++++ 
+ 
+Tensorflow bu – ... 
+==== # 
+Python kutubxonasi bo’lib, neyron tarmoqlarini hosil qilishga mo’ljallangan. 
+==== 
+Matlab kutubxonasi bo’lib, neyron tarmoqlarini hosil qilishga mo’ljallangan. 
+==== 
+Ocatev kutubxonasi bo’lib, neyron tarmoqlarini hosil qilishga mo’ljallangan. 
+==== 
+Python kutubxonasi bo’lib, neyron tarmoqlarini hosil qilishga mo’ljallanmagan. 
+ 
++++++ 
+ 
+Sklearn bu - … 
+==== 
+# 
+Python dasturlash tilidagi maxsus kutubxona bo’lib, mashinali o’qitish algoritmlarini amalga oshirishga mo’ljallangan maxsus paket 
+==== 
+Matlabning maxsus paketi bo’lib, mashinali o’qitish algoritmlarini amalga oshirishga mo’ljallangan hisoblanadi 
+==== 
+Python dasturlash tilidagi maxsus kutubxona bo’lib, o’zini o’zi o’qitadigan mashinali o’qitish algortimlarini ishlab chiqishga mo’ljallangan 
+==== 
+Python dasturlash tilidagi maxsus kutubxona bo’lib, mashinali o’qitishning o’qituvchili algoritmlarini amalga oshirishga mo’ljallangan maxsus paket 
+ 
++++++ 
+ 
+Chuqur o’qitish qanday tarmoqlari asosida amalga oshiriladi?  
+# neyron tarmoqlar asosida 
+==== lokal tarmoqlar asosida 
+==== global tarmoqlar asosida 
+==== internet tarmoqlar asosida 
+ 
++++++ 
+ 
+Chuqur o’qitish necha asosiy bosqichlardan tashkil topgan?  
+==== 
+# 
+5 
+==== 
+4 
+==== 
+3 
+==== 
+6 
+ 
++++++ 
+ 
+Chuqur o’qitishning birinchi bosqichi qanday jarayondan iborat?  
+==== 
+# 
+Muammoni tushunib olish. 
+==== 
+Ma’lumotlarni aniqlash. 
+==== 
+Chuqur o’qitish algoritmini belgilash. 
+==== 
+Modelni o’qitish. 
+ 
++++++ 
+ 
+Chuqur o’qitishning ikkinchi bosqichi qanday jarayondan iborat?  
+==== 
+# 
+Ma’lumotlarni aniqlash. 
+==== 
+Chuqur o’qitish algoritmini belgilash. 
+==== 
+Modelni o’qitish. 
+==== 
+Modelni testlash. 
+ 
++++++ 
+ 
+Chuqur o’qitishning turtinchi bosqichi qanday jarayondan iborat?  
+==== 
+# 
+Modelni o’qitish. 
+==== 
+Modelni testlash. 
+==== 
+Chuqur o’qitish algoritmini belgilash. 
+==== 
+Muammoni tushunib olish. 
+ 
++++++ 
+ 
+ 
+Chuqur o’qitishning oxirgi bosqichi qanday jarayondan iborat?  
+==== 
+# 
+Modelni testlash. 
+==== 
+Chuqur o’qitish algoritmini belgilash. 
+==== 
+Modelni o’qitish. 
+==== 
+Ma’lumotlarni aniqlash. 
+ 
++++++ 
+ 
+MNIST dataset da nechta sinfga tegishli obyektlarni ma’lumotlari bor 
+==== 
+# 
+10 
+==== 
+9 
+==== 
+100 
+==== 
+3 
+ 
++++++ 
+ 
+CIFAR10 dataset da nechta sinfga tegishli obyektlarini ma’lumotlari bor 
+==== 
+# 
+10 
+==== 
+9 
+==== 
+100 
+==== 
+3 
+ 
++++++ 
+ 
+CIFAR10 datasetda tasvirlarning o’lchami qaysi o’lchamda  
+==== 
+# 
+To’g’ri javob yo’q 
+==== 
+28x28 
+==== 
+128x128 
+==== 
+64x64 
+ 
++++++ 
+ 
+CIFAR10 datasetda necha tanlama bor 
+==== 
+# 
+60000 
+==== 
+70000 
+==== 
+50000 
+==== 
+10000 
+ 
++++++ 
+ 
+CIFAR100 dataset da nechta sinfga tegishli obyektlarni ma’lumotlari bor 
+==== 
+# 
+100 
+==== 
+99 
+==== 
+10 
+==== 
+2 
+ 
++++++ 
+ 
+IRIS dataset da nechta sinfga tegishli obyektlarni ma’lumotlari bor 
+==== 
+# 
+3 
+==== 
+2 
+==== 
+10 
+==== 
+2 
+ 
++++++ 
+ 
+IRIS dataset da obyektni xarakterlovchi  xususiyatlari nechta 
+==== 
+# 
+4 
+==== 
+2 
+==== 
+3 
+==== 
+8 
+ 
++++++ 
+ 
+Chiziqli va logistik regression model qurilayotganda bitta o’rgatuvchi tanlamadan foydalansa bo’ladimi? 
+==== 
+# 
+Ha, faqat yorliqlari uchun ikkita qiymat saqlangan bo’lsa 
+==== 
+Ha, regression model uchun hamma vaqt dataset bir xilda bo’ladi. 
+==== 
+Buning imkoni yo’q 
+==== 
+To’g’ri javob yo’q 
+ 
++++++ 
+ 
+Chiziqli regresiya va Logistik regresiya uchun Cost funksiyasi bir xilda bo’ladimi? 
+==== 
+# 
+Yoq 
+==== 
+Ha 
+==== 
+Logistik regressiyada cost funksiyasi bo’lmaydi 
+==== 
+Chiziqli regressiyada cost funksiyasi bo’lmaydi 
+ 
++++++ 
+ 
+Python sklearn kutubxonasidagi qaysi Classs chiziqli regressiya modelini qurishda ishlatiladi 
+==== 
+# 
+LinearRegression 
+==== 
+Polyfit 
+==== poly1d 
+==== 
+Linear_model 
+ 
++++++ 
+ 
+Chiziqli regressiyada modelni murakkab tanlansa qaysi turdagi muammo yuzaga keladi 
+==== 
+# 
+Owerfitting 
+==== 
+Underfitting 
+==== 
+Model aniq ishlaydigan bo’lib, shakllanadi. 
+==== 
+Muammo sodir bo’lmaydi 
+ 
++++++ 
+ 
+Chiziqli regressiyada modelni sodda tanlansa qaysi turdagi muammo yuzaga keladi 
+==== 
+# 
+Underfitting 
+==== 
+Owerfitting 
+==== 
+Model ishonchli, hech qanaday muammo yo’q 
+==== 
+Muammo sodir bo’lmaydi 
+ 
++++++ 
+ 
+Chiziqli regression modelni qurib bo’lganimizdan so’ng modelni train dataset bilan testlanganda 65% aniqliq va test dataset bilan testlaganimizda 55% aniqlik bersa, qaysi turdagi mauammo sodir bo’lmoqda  ==== 
+# 
+Underfitting 
+==== 
+Owerfitting 
+==== 
+Model ishonchli, hech qanaday muammo yo’q 
+==== 
+Everfitting 
+ 
++++++ 
+ 
+Chiziqli regression modelni qurib bo’lganimizdan so’ng modelni train dataset bilan testlanganda 25% aniqliq va test dataset bilan testlaganimizda 95% aniqlik bersa, qaysi turdagi mauammo sodir bo’lmoqda  ==== 
+# 
+Underfitting 
+==== 
+Owerfitting 
+==== 
+Model ishonchli, hech qanaday muammo yo’q 
+==== 
+Everfitting 
+ 
++++++ 
+ 
+Chiziqli regression modelni qurib bo’lganimizdan so’ng modelni train dataset bilan testlanganda 95% aniqliq va test dataset bilan testlaganimizda 55% aniqlik bersa, qaysi turdagi mauammo sodir bo’lmoqda ==== 
+# 
+Owerfitting 
+==== 
+Model ishonchli, hech qanaday muammo yo’q 
+==== 
+Underfitting 
+==== 
+Everfitting 
+ 
++++++ 
+ 
+Chiziqli regression modelni qurib bo’lganimizdan so’ng modelni train dataset bilan testlanganda 95% aniqliq va test dataset bilan testlaganimizda 92% aniqlik bersa, qaysi turdagi mauammo sodir bo’lmoqda. 
+==== 
+# 
+Model ishonchli, hech qanaday muammo yo’q 
+==== 
+Underfitting 
+==== 
+Owerfitting 
+==== 
+Everfitting 
+ 
++++++ 
+ 
+Pandas kutubxonasida head() funksiyasi nima vazifa bajaradi? 
+==== 
+# 
+To’plamning dastlabgi bir nechta(5ta) satrini olib beradi. 
+==== 
+To’plamning ustunlar nomini olib beradi. 
+==== 
+To’plamning ustunlar nomisiz  bir nechta  satrini olib beradi. 
+==== 
+To’g’ri javob yo’q 
+ 
++++++ 
+ 
+Pythonda funksiya e’lon qilish uchun qaysi kalit so’zidan foydalaniladi? 
+==== 
+# def ==== function ==== 
+void ==== define 
+ 
++++++ 
+ 
+Neyron tarmoqlarida dastlab vazn koeffitsentlari qanday bo’ladi? 
+==== 
+# random() funksiyasi orqali taxminiy beriladi. 
+==== 
+musbat qiymatlar bilan to’ldiriladi. 
+==== 
+To’ldirish shart emas. 
+==== 
+manfiy qiymatlar bilan to’ldiriladi. 
+ 
++++++ 
+ 
+Neyron tarmoqlarida topilgan vazn koeffitsentlari qanday bo’ladi? 
+==== 
+# 
+Musbat va manfiy bo’lishi mumkin 
+==== 
+Faqat musbat bo’ladi 
+==== 
+Faqat manfiy bo’ladi 
+==== 
+Qiymatlar [0,1] oraliqda bo’ladi. 
+ 
++++++ 
+ 
+KMaens algoritmida qo’llaniladigan ikki nuqta orasidagi masofa … deb yuritiladi.Nutqlar o’rniga mos variantni qo’ying. 
+==== 
+# 
+Euclidean masofasi 
+==== 
+Chebyshev masofasi  
+==== 
+Manhattan masofasi  
+==== 
+Minkowski masofasi  
+ 
++++++ 
+ 
+Gradient tushish algoritmidagi ‘learning rate’ parameter nimani xarakterlaydi? 
+==== 
+# 
+O’qish qadamini 
+==== 
+O’qishitda takrorlanishlar sonini 
+==== 
+To’g’ri javob yo’q 
+==== 
+Model aniqligini 
+ 
++++++ 
+ 
+UCI Machine Learning Repository nima ? 
+==== 
+# 
+Mashinili o’qitishning ochiq manbali datasetlarini qidirishga mo’ljallangan tizim 
+==== 
+GitHub  Repository 
+==== 
+Gitlab  Repository 
+==== 
+Kaggle  Repository 
+ 
++++++ 
+ 
+Google Dataset Search qancha ma’lumotni qamrab oladi? 
+==== 
+# 
+25 mln 
+==== 
+250mln 
+==== 
+15mln 
+==== 
+6mln 
+ 
++++++ 
+ 
+Python array bu - 
+==== 
+# bir tipdagi (bir xil ma’lumotlar toifasiga tegishli) elementlar to’plamidan 
+==== turli tipdagi elementlar to’plamidan iborat dinamik massiv 
+==== turli tipdagi elementlar to’plamidan iborat statik massiv 
+==== 
+To’g’ri javob yo’q 
+ 
++++++ 
+ 
+Python list bu - 
+==== 
+# turli tipdagi elementlar to’plamidan iborat dinamik massiv 
+==== bir tipdagi (bir xil ma’lumotlar toifasiga tegishli) elementlar to’plamidan iborat dinamik massiv 
+==== turli tipdagi elementlar to’plamidan iborat statik massiv 
+==== 
+To’g’ri javob yo’q 
+ 
++++++ 
+ 
+Python tuple bu - 
+==== 
+# turli tipdagi elementlar to’plamidan iborat statik massiv 
+==== 
+bir tipdagi (bir xil ma’lumotlar toifasiga tegishli) elementlar to’plamidan iborat dinamik massiv 
+==== turli tipdagi elementlar to’plamidan iborat statik massiv 
+==== 
+To’g’ri javob yo’q 
+ 
++++++ 
+ 
+Mashinali o’qitishda samaradorlikni baholash uchun qanday matritsadan foydalaniladi?  
+==== 
+# 
+Tartibsizlik matritsasi (confusion matrix) 
+==== 
+Aniqliq matritsasi (accuracy matrix) 
+==== 
+Xatolik matritsasi (loss matrix) 
+==== 
+Barchasi to’g’ri 
+ 
++++++ 
+ 
+pip freeze 
+==== 
+# 
+Environment o’rnatilgan barcha paketlar ro’yxatini chop qiladi 
+==== 
+Environment  o’rnatilgan eng oxirgi paketlar ro’yxatini chop qiladi 
+==== 
+Environment  o’rnatilgan eng oxirgi 10 ta paket ro’yxatini chop qiladi 
+==== 
+Environment o’rnatilgan mashinali o’qitishga xizmat qiladigan paketlar ro’yxatini chop qilish 
+ 
++++++ 
+ 
+pip install numpy as np 
+==== 
+# 
+Xatolik sodir bo’ladi 
+==== 
+Numpy kutubxonasi o’rnatiladi 
+==== 
+Numpy kutubxonasi yuklash va quyida uni np deb yuritish mumkin 
+==== 
+To’g’ri javob yo’q 
+ 
++++++ 
+ 
+import numpy as nb 
+==== 
+# 
+Numpy kutubxonasi yuklash va quyida uni nb deb yuritish mumkin 
+==== 
+Xatolik sodir bo’ladi 
+==== 
+Numpy kutubxonasi o’rnatiladi 
+==== 
+Numpy kutubxonasi yuklash va quyida uni np deb yuritish mumkin 
+ 
++++++ 
+ 
+Agar mashinali o’qitish  qo’llaniladigan  sklearn kutubxonasi o’rnatilmagan bo’lsa uni qanday o’rnatish mumkin. 
+==== 
+# 
+Barchasi to’g’ri ==== 
+pip install  sklearn 
+==== conda install scikit-learn 
+==== 
+pip install  scikit-learn 
+ 
++++++ 
+ 
+O’rgatuvchi tanlamasiz(dataset siz) mashinali o’qitish algoritmlarini ishlata olamizmi 
+==== 
+# 
+Imkoni yoq 
+==== 
+Ha, albatta 
+==== 
+Ba’zan 
+==== 
+To’g’ri javob yo’q 
+ 
++++++ 
+ 
+Python muhitida neyron tarmoq qurish uchun qaysi paketlardan foydalaniladi? 
+==== 
+# 
+keras, tensorflow  
+==== tensorflow, pandas 
+==== numpy, matplotlib 
+==== pandas, opencv 
+ 
++++++ 
+ 
+Keras muhitida modelni testlash uchun mavjud funksiyalardan qaysi biri ishlatiladi? 
+==== 
+# 
+fit() 
+==== compile() ==== 
+evaluate() ==== 
+test() 
+ 
++++++ 
+ 
+O’qituvchili o’qitish (supervised learning) nima? 
+==== 
+# modelni o’qitish uchun ma’lumotlar bilan birgalikda ularning belgisini (data+label) ham ishlatish 
+==== modelni o’qitish uchun ma’lumotlarni belgisisiz (data without label) ishlatish 
+==== modelni o’qitish uchun tasvir ma’lumotlaridan (image) foydalanish 
+==== 
+modelni o’qitish uchun faqat ma’lumotlar belgisini (label) ishlatish 
+ 
++++++ 
+ 
+Keras muhitida qurilgan neyron tarmoqda joriy qatlam uchun faollashtirish funksiyasini qo’shishda quyidagilarning qaysi biridan foydalaniladi? 
+==== 
+# model.add(Activation(‘relu’)) 
+==== model.insert(Activation(‘relu’)) 
+==== model.function(Activate(‘relu’)) 
+==== model.add(ActiveFunction(‘relu’)) 
+ 
++++++ 
+ 
+O’qituvchisiz (unsupervised) o’qitish algortimlari to’g’ri ko’rsatilgan javobni ko’rsating? 
+==== 
+# k-means clustering, hierarchical clustering, independent component analysis 
+==== linear regression, nearest neighbor, random forest, decision tree 
+==== k-means clustering, deep learning, logistic regression, random forest 
+==== k-nn, decision tree, linear regression, k-means clustering 
+ 
++++++ 
+ 
+O’qituvchisiz o’qitish (unsupervised learning) nima? 
+==== 
+# modelni o’qitish uchun ma’lumotlarni belgisisiz (data without label) ishlatish 
+==== 
+modelni o’qitish uchun faqat ma’lumotlar belgisini (label) ishlatish 
+==== modelni o’qitish uchun ma’lumotlar bilan birgalikda ularning belgisini (data+label) ham ishlatish 
+==== modelni o’qitish uchun tasvir ma’lumotlari va ularning belgilaridan (image+label) foydalanish 
+ 
++++++ 
+ 
+Sigmoid funksiyasini hisoblash formulasini ko’rsating? 
+==== 
+# sig(x)=1/(1+exp(-x)) 
+==== sig(x)=1/(1-exp(x)) 
+==== sig(x)=1/exp(-x) ==== 
+sig(x)=1/exp(x) 
+ 
++++++ 
+ 
+Mashinali o’qitish nima? 
+==== 
+# kompyuter dasturining ma’lumotlarni o’qib olish asosida xususiyatlarni o’rganish qobiliyatidir 
+==== faqat kompyuter o’yinlarini yaratish uchun dastur xususiyatlarni o’rganish qobiliyatidir 
+==== bu robotni o’rgatishning an’anaviy usuli ==== kompyuter dasturlarini lug’at yordamida o’qitish usuli 
+ 
++++++ 
+ 
+Pythonda massivni e’lon qilish uchun qanday toifalardan foydalaniladi? 
+==== 
+# array, matrix ==== 
+tuple, arr 
+==== 
+list, tuple 
+==== 
+arr, list 
+ 
++++++ 
+ 
+…… bu ikkita qatlamdan iborat ya’ni kiruvchi va chiquvchi qatlamdan iborat bo’lgan neyronni hisoblash tugunidir. Nuqtalar o’rniga quyidagilardan mos keldiganini qo’ying? 
+==== 
+# perceptron  ==== sigmoid funksiyasi 
+==== neyron 
+==== 
+ReLU funksiyasi 
+ 
++++++ 
+ 
+Regressiya nima? 
+==== 
+# ma’lumotlarni intellektual tahlil qilish usullaridan biri 
+==== ma’lumotlarni ustida arifmetik usullaridan biri 
+==== ma’lumotlarni raqamli ishlov berish usullaridan biri 
+==== ma’lumotlarni jamlash usullaridan biri 
+ 
++++++ 
+ 
+Python muhitida for sikl operatorida ishlatiladigan for i in range(0,10,2) ifodasida i indeks o’zgaruvchisiga qanday qiymatlar keladi? 
+==== 
+# 
+0 2 4 6 8 
+==== 
+0 2 10 
+==== 
+0 10 
+==== 
+2 4 6 8 10 
+ 
++++++ 
+ 
+Supervised o’qitish algoritmlari asosan qanday masalani yechishga qaratilgan? 
+==== 
+# regressiya va sinflashtirish masalasiga 
+==== statistik usullar yordamida ma’lumotlarni ajratish masalasiga 
+==== 
+statistik usullar yordamida ma’lumotlarni sinflashtirish masalasiga 
+==== sinflashtirish va segmentlash masalasiga 
+ 
++++++ 
+ 
+Neyron tarmoqda qanday turdagi qatlamlar (layers) bo’lishi mumkin? 
+==== 
+# kiruvchi, chiquvchi, yashirin 
+==== 
+kiruvchi, yashirin, oraliq 
+==== 
+qabul qiluvchi, hisoblovchi, chiquvchi 
+==== kiruvchi, qabul qiluvchi, chiquvchi 
+ 
++++++ 
+ 
+Chiziqli regression model nima uchun ishlatiladi? 
+==== 
+# bashorat qilish uchun 
+==== mantiqiy model qurish uchun 
+==== sinflashtirish masalasini yechish uchun 
+==== segmentlash masalasini yechish uchun 
+ 
++++++ 
+ 
+Neyron tarmoq nima? 
+==== 
+# bu inson miyasining ishlash faoliyatini qisman aks ettiruvchi tuzilma 
+==== bu inson miyasining ishlash faoliyatini qisman aks ettiruvchi dataset 
+==== 
+bu inson miyasining ishlash faoliyatini butunlay aks ettiruvchi dataset 
+==== bu inson miyasining ishlash faoliyatini butunlay aks ettiruvchi tuzilma 
+ 
++++++ 
+ 
+Sun’iy intellekt deganda nimani tushunasiz? 
+==== 
+# insonning onggi kabi fikrlovchi dastur 
+==== oddiy kompyuter dasturi 
+==== 
+qaror qabul qiluvchi ilovalar 
+==== bunday termin fanda mavjud emas 
+ 
++++++ 
+ 
+Sun'iy intellekt bu …? 
+==== 
+# 
+bu kompyuterda insonning aqlli xatti harakatlarini qanday amalga oshirishni o'rganadigan tadqiqot sohasi ==== 
+bu kompyuterda insonning jismoniy xatti harakatlarini qanday amalga oshirishni o'rganadigan tadqiqot sohasi ==== 
+bu kompyuterda insonning bialogik xatti harakatlarini qanday amalga oshirishni o'rganadigan tadqiqot sohasi 
+==== 
+To’g’ri javob yo’q  
+ 
++++++ 
+ 
+Keras kutubxonasidagi Sequential() nima vazifani bajaradi? 
+==== 
+# neyron tarmoq modelini qurish uchun dastlabki obyektni yaratadi 
+==== ketma-ket kamida 2 qatlamdan iborat neyron tarmoq quradi 
+==== neyron tarmoq modelini o’qitish uchun ishlatiladi 
+==== qurilgan neyron tarmoqni ketma-ket ko’rinishga keltiradi 
+ 
++++++ 
+ 
+Python muhitida for sikl operatorida ishlatiladigan for i in range(10) ifodasida i indeks o’zgaruvchisiga qanday qiymatlar keladi? 
+==== 
+# 
+0 1 2 3 4 5 6 7 8 9 
+==== 
+0 1 2 3 4 5 6 7 8 9 10 
+==== 
+0	9 
+==== 
+1	2 3 4 5 6 7 8 9 10 
+ 
++++++ 
+ 
+Qanday turdagi faollashtirish funksiyalari mavud? 
+==== 
+# 
+ReLU, sigmoid, softmax 
+==== loss, sigmoid, ReLU 
+==== 
+ReLU, cost, softmax 
+==== 
+cost, loss, sigmoid 
+ 
++++++ 
+ 
+Chuqur o’qitish – bu? 
+==== 
+# bu ko'p qatlamli neyron tarmoqlar asosida obyekt xususiyatlarini tushunishga qaratilgan jarayondir 
+==== bu bir qatlamli neyron tarmoqlar asosida obyekt xususiyatlarini tushunishga qaratilgan jarayondir 
+==== bu bu modelni qurib olish uchun amalga oshiriladigan o’qitish jarayonidir 
+==== bu modelni tezroq va aniqroq qurib olish uchun amalga oshiriladigan jarayon 
+ 
++++++ 
+ 
+Python muhitida turli xil matematik funksiya grafiklarini va tasvirlarni vizuallashtirish uchun ishlatiladigan paket qaysi?  
+==== 
+# matplotlib ==== keras ==== pandas ==== 
+numpy 
+ 
++++++ 
+ 
+Sun’iy neyron tarmoq tashkil etuvchilarini ko’rsating? 
+==== 
+# node, input, weights, output 
+==== cell body, dendrites, synapse, axon 
+==== input, dendrites, synapse, output 
+==== synapse, axon, weights, node 
+ 
++++++ 
+ 
+Python muhitida scatter() funksiyasi qanday vazifani bajaradi? 
+==== 
+# berilgan x,y to'plam bo’yicha 2 o’lchovli grafigini chizish uchun ishlatiladi 
+==== chiziqli regression model koeffitsentlarini (ko’pi bilan 3 ta) hisoblaydi 
+==== polinomial regression model koeffitsentlarini hisoblaydi ==== qurilgan model koeffitsentlari bo’yicha bashorat qilinadigan qiymatlarni hisoblaydi 
+ 
++++++ 
+ 
+pip install tensorflow buyrug’i asosida nima sodir bo’ladi? 
+==== 
+# tensorflow kutubxonasi o’rnatiladi 
+==== keras va tensorflow kutubxonasi o’rnatiladi 
+==== tensorflow kutubxonasi chaqiriladi 
+==== keras va tensorflow kutubxonasi chaqiriladi 
+ 
++++++ 
+ 
+Biologik neyron tarmoq tashkil etuvchilarini ko’rsating? 
+==== 
+# cell body, dendrites, synapse, axon 
+==== input, dendrites, synapse, output 
+==== node, input, weights, output 
+==== synapse, axon, weights, node 
+ 
++++++ 
+ 
+Dataset bu nima? 
+==== 
+# bu o’qitish uchun kerakli bo’lgan ma'lumotlar to'plamidir 
+==== bu o’qitish uchun kerakli bo’lgan neyronlar to'plamidir 
+==== bu o’qitish uchun kerakli bo’lgan og’irliklar to'plamidir 
+==== bu o’qitish uchun kerakli bo’lgan neyron tarmoq qatlamlar to'plamidir 
+ 
++++++ 
+ 
+Convolutional neural networks (CNN) – bu? 
+==== 
+# bu ko'p qatlamli neyron tarmoq asosida qurilgan chuqur o’qitishning maxsus arxitekturasi 
+==== bu bir qatlamli neyron tarmoq asosida qurilgan chuqur o’qitishning maxsus arxitekturasi 
+==== bu ko’p qatlamli neyron tarmoq asosida qurilgan chuqur o’qitishning maxsus usuli 
+==== bu bir qatlamli neyron tarmoq asosida qurilgan chuqur o’qitishning maxsus usuli 
+ 
++++++ 
+ 
+Sun’iy intellektga asoslangan dasturlarni ishlab chiqishdan maqsad nima? 
+==== 
+# mustaqil fikrlovchi va qaror qabul qiluvchi dasturlarni hayotga tadbiq qilish 
+==== vaqtni maroqli o‘tkazish 
+==== 
+insonlarning yashash darajasini yaxshilash 
+==== ortiqcha sarf-xarajatni kamaytirish 
+ 
++++++ 
+ 
+Neyron tarmoqdagi tugun qiymati -5 ga teng. Ushbu tugun ReLU funksiyasi yordamida faollashtirilsa qanday qiymatga o’zgaradi? 
+==== 
+# 
+0 
+==== 
+5 
+==== 
+-5 
+==== 
+3,5 
+ 
++++++ 
+ 
+Mashinani o’qitish turlari to’g’ri ko’rsatilgan javobni tanlang? 
+==== 
+# 
+supervised, unsupervised, Semi-supervised, reinforcement 
+==== regressiya, Ehtimollar nazariyasi, Supervised, unsupervised 
+==== supervised, unsupervised, Regressiya, Sinflashtirish 
+==== regressiya, Sinflashtirish, Semi-supervised, reinforcement 
+ 
++++++ 
+ 
+Neyron tarmoqlari bu…? 
+==== # 
+Neyron tarmoqlari juda ko’p muhim xususiyatlarga ega, ammo asosiysi bu o’rganish qobiliyatidir. 
+==== 
+Neyron tarmoqlari ma’lumotlarni bog’lash uchun xizmat qiladi. 
+==== 
+Bunday tarmoq mavjud emas 
+==== 
+Ikkilik kod sifatidagi algoritm 
+ 
++++++ 
+ 
+Chiziqli regressiyaga to’g’ri ta’rifni toping? 
+==== 
+# 
+Chiziqli regressiya kuzatilgan ma'lumotlarga chiziqli tenglamani bog’lash orqali ikkita o'zgaruvchi o'rtasidagi munosabatni modellashtirishga aytiladi. 
+==== 
+Chiziqli regressiya ma’lumotlarni klassifikatsiyalaydi. 
+==== 
+Chiziqli Regressiya bu tanlangan ma’lumotlar ichidan kerakli ma’lumotni qidirish algoritmi. 
+==== 
+To’g’ri javob yo’q. 
+ 
++++++ 
+ 
+Quyidagi usullardan qaysi biri har qanday chiziqli bo'linadigan ma'lumotlar to'plamida nol o'qitish(zero training) xatosiga erishishi mumkin? 
+==== 
+# 
+KNN 
+==== 
+Qaror daraxti 
+==== 
+SVM(support vector machine) 
+==== 
+CNN 
+ 
++++++ 
+ 
+CNN bu…? 
+==== 
+# 
+Svyortkali neyron tarmoq 
+==== 
+Adamar neyron tarmog’i 
+==== 
+K ta yaqin qo’shnilar 
+==== 
+Qayta murojaat neyron tarmog’i 
+ 
++++++ 
+ 
+KNN bu…? 
+==== 
+# 
+K ta yaqin qo’shnilar  agoritmi 
+==== 
+Svyortkali neyron tarmoq 
+==== 
+Adamar almashtririshli Neyron tarmoq 
+==== 
+To’g’ri javob yo’q 
+ 
++++++ 
+ 
+Sun’iy intellektda mashinani o'qitish uchun to’g’ri ta’rif berilgan qatorni tanlang 
+==== 
+# 
+Sun’iy intellekt - bu inson ongiga taqlid qila oladigan dasturiy ta'minot va uni mashinali o’qitishda aqlli mashinalarga dasturlashning muqobil usulidir. 
+==== 
+Mashinali o’qitish - bu aqlli mashinalarni dasturlashning muqobil usuli. 
+==== 
+Mashinali o’qitish va suniy intellektning maqsadlari juda boshqacha. 
+==== 
+To’g’ri javob yo’q 
+ 
++++++ 
+ 
+Mashinali o’qitish turlari qaysi qatorda to’g’ri berilgan 
+==== 
+# 
+O’qtuvchili va O’qituvchisiz 
+==== 
+Tanlanma 
+==== 
+Ma’lumotlar bazasi 
+==== 
+Chiziqli va logistik 
+ 
++++++ 
+ 
+O’qituvchili o’qitish (Supervised learning) – bu .. ? 
+==== 
+# bu modelni xususiyatlari aniq bo’lgan ma’lumotlar bilan o’qitish .  ==== 
+Bu – modelning aniqligini aniqlash algoritmi 
+==== 
+Ma’lumotlarga ishlov berish dasturi 
+==== 
+Oddiy algoritm 
+ 
++++++ 
+ 
+O’qituvchisiz o’qitish (unsupervised learning) – bu … ? 
+==== 
+# 
+mashinani o’qitish usulidan biri bo’lib, bunda modelni oldindan aniq bo’lgan ma’lumotlar bilan o’qitish amalga oshirilmaydi, aksincha obyekt parametrlarini (ma'lumotlarni) topish uchun modelga o'z ustida ishlashga imkon yaratib beriladi 
+==== 
+Ma’lumot qidirish algoritmlaridan tashkil topgan tizim 
+==== 
+Bunday o’qitish mavjud emas 
+==== 
+To’g’ri javob yo’q 
+ 
++++++ 
+ 
+Unsupervised learning usulida asosan qanday masala yechiladi? 
+==== 
+# klasterlash ==== normallashtirish 
+==== 
+sinflashtirish 
+==== 
+Signallarga ishlov berish 
+ 
++++++ 
+ 
+O’qituvchisiz o’qitish algoritmlari qaysi? 
+==== 
+# 
+Hierarchical clustering va K-means clustering 
+==== 
+SVM va CNN 
+==== 
+RNN va GMM 
+==== 
+To’g’ri javob yo’q 
+ 
++++++ 
+ 
+Ma’lumotlarni tozalashga to'liq ta'rif berilgan qatorini toping? 
+==== 
+# 
+Ushbu bosqichda ma’lumotlar orasidan ortiqcha yoki ahamiyati past bo’lgan model turg’unligiga ta’sir qiluvchi ma’lumotlar olib tashlanadi. 
+==== 
+Dataset ma’lumotlarini testlash 
+==== 
+To’g’ri javob yo’q 
+==== 
+Qaror daraxtidan ma’lumotlarni olib tashlash 
+ 
++++++ 
+ 
+Xususiyatlarni ajratib olishga to'liq ta'rif berilgan qatorini toping? 
+==== 
+# 
+o’qituvchi to’plamdagi ma’lumotlar xususiyatlari o’rganib chiqiladi va bashoratlash, tashxislash, sinflashtirish, qaror qabul qilish uchun kerakli xususiyatlar ajratib olish 
+==== 
+Qaror qabul qilish daraxti qiymatlari 
+==== 
+Sinflashtirish masalasini yechish algoritmi to’plami 
+==== 
+To’g’ri javob yo’q 
+ 
++++++ 
+ 
+Neyron tarmoqdagi tugun qiymati 0.5 ga teng. Ushbu tugun ReLU funksiyasi yordamida faollashtirilsa qanday qiymatga o‟zgaradi  
+==== 
+# 
+0.5 
+==== 
+1 
+==== 
+0 
+==== 
+2 
+ 
++++++ 
+ 
+Chiziqli regressiya qaysi mashinali o’qitish algoritmlari tarkibiga kiradi? 
+==== 
+# 
+O’qituvchili o’qitish 
+==== 
+O’qituvchisiz o’qitish 
+==== 
+Reinforcementli o'qitish 
+==== 
+To’g’ri javob yo’q 
+ 
++++++ 
+ 
+Neyron tarmoqdagi tugun qiymati 2.5 ga teng. Ushbu tugun ReLU funksiyasi yordamida faollashtirilsa qanday qiymatga o‟zgaradi  
+==== 
+# 
+2,5 
+==== 
+2 
+==== 
+0 
+==== 
+44595 
+ 
++++++ 
+ 
+Sun’iy intellektda mashinani o'qitish uchun to’g’ri ta’rif berilgan qatorni tanlang 
+==== 
+# 
+Sun’iy intellekt - bu inson ongiga taqlid qila oladigan dasturiy ta'minot va uni mashinali o’qitishda aqlli mashinalarga dasturlashning muqobil usulidir. 
+==== 
+Mashinali o’qitish - bu aqlli mashinalarni dasturlashning muqobil usuli. 
+==== 
+Mashinali o’qitish va suniy intellektning maqsadlari juda boshqacha. 
+==== 
+To’g’ri javob yo’q 
+ 
++++++ 
+ 
+Mashinali o’qitish turlari qaysi qatorda to’g’ri berilgan 
+==== 
+# 
+O’qtuvchili va O’qituvchisiz 
+==== 
+Tanlanma 
+==== 
+Ma’lumotlar bazasi 
+==== 
+Chiziqli va logistik 
+ 
++++++ 
+ 
+O’qituvchili o’qitish (Supervised learning) – bu .. ? 
+==== 
+# bu modelni xususiyatlari aniq bo’lgan ma’lumotlar bilan o’qitish .  
+==== 
+Bu – modelning aniqligini aniqlash algoritmi 
+==== 
+Ma’lumotlarga ishlov berish dasturi 
+==== 
+Oddiy algoritm 
+ 
++++++ 
+ 
+O’qituvchisiz o’qitish (unsupervised learning) – bu … ? 
+==== 
+# 
+mashinani o’qitish usulidan biri bo’lib, bunda modelni oldindan aniq bo’lgan ma’lumotlar bilan o’qitish amalga oshirilmaydi, aksincha obyekt parametrlarini (ma'lumotlarni) topish uchun modelga o'z ustida ishlashga imkon yaratib beriladi 
+==== 
+Ma’lumot qidirish algoritmlaridan tashkil topgan tizim 
+==== 
+Bunday o’qitish mavjud emas 
+==== 
+To’g’ri javob yo’q 
+ 
++++++ 
+ 
+Unsupervised learning usulida asosan qanday masala yechiladi? 
+==== 
+# klasterlash ==== normallashtirish ==== 
+sinflashtirish 
+==== 
+Signallarga ishlov berish 
+ 
++++++ 
+ 
+O’qituvchisiz o’qitish algoritmlari qaysi? 
+==== 
+# 
+Hierarchical clustering va K-means clustering 
+==== 
+SVM va CNN 
+==== 
+RNN va GMM 
+==== 
+To’g’ri javob yo’q 
+ 
++++++ 
+ 
+Hozirgi kunda butun dunyoda rivojlanib borayotgan mashinali o’qitish (machine learning), chuqur o’qitish (deep learning) kabi usullar sun’iy intellekt bilan qanday bog’liq  
+==== 
+# 
+hozirda tasvirlardan ob’ektlarni tanib olish,  video nazorat, ovozni tanib olish kabi sohalarda keng foydalaniladi va sun’iy intellekt tizimini yaratishda katta ahamiyat kasb etadi 
+==== faqat ovozni tanib olishda ishlatiladi va sun’iy intellekt tizimini yaratishda deyarli fodalanilmaydi 
+==== tasvirlarni tanib olishda ishlatiladi va sun’iy intellekt tizimini yaratishda foydalaniladi 
+==== faqatgina ma’lumotlarning intellektual tahliliga oid 
+ 
++++++ 
+ 
+Mashinani o’qitish jarayonida ma’lumotlarga qanday dastlabki ishlov beriladi?  
+==== 
+# 
+Format, Data Cleaning, Feature Extraction 
+==== 
+Data Cleaning, Resizing, , Feature Extraction 
+==== 
+Resizing, Feature Extraction, Format 
+==== 
+Format, Resizing, Data Cleaning 
+ 
++++++ 
+ 
+Regression tahlilni qanday usullar asosida amalga oshiriladi.  
+==== 
+# chiziqli, nochiziqli va logistik regressiya usullari asosida 
+==== 
+sintaktik usullar asosida 
+==== dinamik usillar asosida 
+==== semantik usullari asosida 
+ 
++++++ 
+ 
+Muammoni aniqlash, ma’lumotlarni tayyorlash, algoritmni ishlab chiqish va baholash, natijaviy ma’lumotlar aniqligini oshirish va yakuniy natijani taqdim qilish – bular qanday jarayonning bosqichlari hisoblanadi  
+==== 
+# 
+Mashinali o’qitish  
+==== 
+Chuqur o’qitish 
+==== 
+Regression tahlil 
+==== 
+Statistik tahlil 
+ 
++++++ 
+ 
+Keras bu – ...  
+==== 
+# 
+tensorflow asosiga qurilgan ochiq kodli neyron tarmoq uchun mo’ljallangan kutubxona 
+==== numpy asosiga qurilgan ochiq kodli neyron tarmoq uchun mo’ljallangan kutubxona ==== 
+ochiq kodli neyron tarmoq uchun mo’ljallangan dasturiy vosita 
+==== matplotlib asosiga qurilgan ochiq kodli neyron tarmoq uchun mo’ljallangan kutubxona 
+ 
++++++ 
+ 
+Tensorflow bu – ... 
+==== # 
+Python kutubxonasi bo’lib, neyron tarmoqlarini hosil qilishga mo’ljallangan. 
+==== 
+Matlab kutubxonasi bo’lib, neyron tarmoqlarini hosil qilishga mo’ljallangan. 
+==== 
+Ocatev kutubxonasi bo’lib, neyron tarmoqlarini hosil qilishga mo’ljallangan. 
+==== 
+Python kutubxonasi bo’lib, neyron tarmoqlarini hosil qilishga mo’ljallanmagan. 
+ 
++++++ 
+ 
+Sklearn bu - … 
+==== 
+# 
+Python dasturlash tilidagi maxsus kutubxona bo’lib, mashinali o’qitish algoritmlarini amalga oshirishga mo’ljallangan maxsus paket 
+==== 
+Matlabning maxsus paketi bo’lib, mashinali o’qitish algoritmlarini amalga oshirishga mo’ljallangan hisoblanadi 
+==== 
+Python dasturlash tilidagi maxsus kutubxona bo’lib, o’zini o’zi o’qitadigan mashinali o’qitish algortimlarini ishlab chiqishga mo’ljallangan 
+==== 
+Python dasturlash tilidagi maxsus kutubxona bo’lib, mashinali o’qitishning o’qituvchili algoritmlarini amalga oshirishga mo’ljallangan maxsus paket 
+ 
++++++ 
+ 
+Chuqur o’qitish qanday tarmoqlari asosida amalga oshiriladi?  
+==== 
+# neyron tarmoqlar asosida 
+==== lokal tarmoqlar asosida 
+==== global tarmoqlar asosida 
+==== internet tarmoqlar asosida 
+ 
++++++ 
+ 
+Chuqur o’qitish necha asosiy bosqichlardan tashkil topgan?  
+==== 
+# 
+5 
+==== 
+4 
+==== 
+3 
+==== 
+6 
+ 
++++++ 
+ 
+IRIS dataset da obyektni xarakterlovchi  xususiyatlari nechta 
+==== 
+# 
+4 
+==== 
+2 
+==== 
+3 
+==== 
+8 
+ 
++++++ 
+ 
+Supervised learning ? 
+==== 
+# bu modelni xususiyatlari  aniq bo’lgan  ma’lumotlar bilan  o’qitish 
+==== bu modelni xususiyatlari aniq  bo’lmagan ma’lumotlar  bilan  o’qitish 
+==== bu modelni  ham aniq ham aniq  bo’lmagan xususiyatli  ma’lumotlar bilan  o’qitishdir. 
+==== 
+bu  o’qitishning mukammal  usuli bo’lib, bunda  model o’zini-o’zi qayta  o’qitish va natijalarni  yaxshilash imkoniyatiga  ega bo’ladi. 
+ 
++++++ 
+ 
+Mashinali o’qitishning o’qituvchili sinflashtirish algoritmini ko’rsating 
+==== 
+# 
+KNN,SVM,Logistik regresiya 
+==== 
+Kmaens 
+==== 
+Chiziqli regressiya 
+==== 
+Kmaens,KNN 
+ 
++++++ 
+Sun’iy intellekti bo’lmagan elementni ko’rsating 
+==== 
+# 
+Hub 
+==== 
+Kalkulyator 
+==== 
+Telefon 
+==== 
+Foto Radar 
+ 
++++++ 
+ 
+Mashinali o’qitish va suniy intellekt 
+==== 
+# 
+Mashinali o’qitish sun’iy intellekt tizimlarini ishlab chiqishga xizmat qiladi 
+==== 
+Bir tushunchani ifodalaydi 
+==== 
+Sun’iy intellekt mashinali o’qitish tizimlarini ishlab chiqishga xizmat qiladi 
+==== 
+Turli tushunchalarni ifodalaydi 
+ 
++++++ 
+ 
+Mashinali o’qitishning asosiy turlari qaysilar 
+==== 
+# 
+O’qituvchili,O’qituvchisiz 
+==== 
+Regressiya,Sinflashtirish 
+==== 
+KNN,SVM,Kmaens 
+==== 
+Logistik va chiziqli regressiya 
+ 
++++++ 
+ 
+Chiziqli va logistic regressiyaning asosiy farqi 
+==== 
+# 
+Bu ikkalasi ikki turdagi masalani ishlaydi. chiziqli  regressiya basharotlash, logistic regressiya sinflashtirish 
+==== 
+Bu ikkalasi ikki turdagi masalani ishlaydi. chiziqli  sinflashtirish basharotlash, logistic regressiya regressiya ==== 
+Ikkalasi ham bir turdagi masalani ishlash uchun mo’ljallangan 
+==== 
+To’g’ri javob yo’q 
+ 
++++++ 
+ 
+Python dasturlash tilida ma’lumotlarni visuallashtirish uchun ishlatiladigan kutubxona 
+==== 
+# 
+Matplotlib ==== plotData ==== 
+Pillow  
+==== 
+PyPlot 
+ 
++++++ 
+ 
+Numpy kutubxonasida ikkita vektorni vektor ko’paytirish amali qanaqa? 
+==== # 
+A@B 
+==== 
+A*B ==== 
+np.dot([A,B]) ==== np.multiply([A,B]) 
+ 
++++++ 
+ 
+Pythonda ikkita vektorni birlashtirishda xatolik sodir bo’ladigan javobni tanlang 
+==== 
+# a=append(a,b) ==== a=np.append(a,b) ==== a=np.append(b,a) 
+==== 
+Varinatlarning barchasida vektorlar birlashtiriladi 
+ 
++++++ 
+ 
+Cost funksiya bu? 
+==== 
+# 
+Modelni o’qitish davrida model tomonidan topilgan qiymat bilan o’rgatuvchi tanlamada berilgan qiymat oralidagi farqlarni hisoblash funksiyasi 
+==== 
+Cosinius funksiyasini qisqartma ko’rinishi?  
+==== 
+Bunday nomdagi funksiya yo’q.  
+==== 
+Modelni testlash davrida model tomonidan topilgan qiymat bilan o’rgatuvchi tanlamada berilgan qiymat oralidagi farqlarni hisoblash funksiyasi 
+ 
++++++ 
+ 
+Chiziqli regression model nechta qiymat qaytaradi 
+==== 
+# 
+Har doim bitta 
+==== 
+Ixtiyoriy ravishdagi sonda qiymat qaytarishi mumkin 
+==== 
+Har doim bittadan ko’p 
+==== 
+To’g’ri javob yo’q 
+ 
++++++ 
+ 
+QR code mashinali o’qitilish algoritmi asosida ishlab chiqilgan ? 
+==== 
+# 
+Noto’g’ri, 
+==== 
+To’g’ri 
+==== 
+Bo’lishi mumkin 
+==== 
+Bilmayman 
+ 
++++++ 
+ 
+Gradient tushish bu? 
+==== 
+# 
+Model parametrlarini sozlash uchun ishlatiladigan algoritm 
+==== 
+Xatolik funksiyasi 
+==== 
+Kiruvchi ma’lumotlarni narmallashtirish uchun qiymatlarni 0,1oraliqqa tushirish 
+==== 
+Mashinali o’qitish turi 
+ 
++++++ 
+ 
+Bias va Variance tushunchalarining farqi nimada? 
+==== 
+# 
+Bias modelni train to’plam bilan testlagandagi xatolik, Variance esa test to’plam bilan testlagandagi xatolik 
+==== 
+Bias modelni test to’plam bilan testlagandagi xatolik, Variance esa train to’plam bilan testlagandagi xatolik 
+==== 
+Bias modelni train +test to’plam bilan testlagandagi umumiy xatolik, Variance esa faqat test to’plam bilan testlagandagi xatolik 
+==== 
+Bias modelni train +test to’plam bilan testlagandagi umumiy xatolik, Variance esa faqat train to’plam bilan testlagandagi xatolik 
+ 
++++++ 
+ 
+Agar bias yuqori bo’lsa qaysi turdagi muammo sodir bo’lmoqda? 
+==== 
+# 
+Underfitting 
+==== 
+Owerfitting 
+==== 
+Bias ni yuqoriligi mumamo hisoblanmaydi 
+==== 
+Model juda murakkab 
+ 
++++++ 
+ 
+Agar Variance yuqori bo’lsa qanday turdagi muammo sodir bo’lmoqda? 
+==== 
+# 
+Owerfitting 
+==== 
+Underfitting 
+==== 
+Variance ni yuqoriligi mumamo hisoblanmaydi 
+==== 
+Model juda sodda 
+ 
++++++ 
+ 
+Agar biass quyi va variance yuqori bo’lsa qanday turdagi muammo sodir bo’lmoqda? 
+==== 
+# 
+Owerfitting 
+==== 
+Underfitting 
+==== 
+Bias ni quyi variance ni yuqoriligi mumamo hisoblanmaydi 
+==== 
+Model juda sodda 
+ 
++++++ 
+ 
+Model murakkab bo’lsa bias qanday bo’ladi? 
+==== 
+# 
+Quyi, model o’rgatuvchi tanlamaga mostlashib qoladi va train to’plamda xatoligi past bo’ladi ==== 
+To’g’ri javob yo’q 
+==== 
+Bias ning quyi yoki yuqori bo’lishi model murakkabligiga bog’liq emas. 
+==== 
+Yuqori, model o’rgatuvchi tanlamaga mostlashib qoladi va train to’plamda xatoligi yuqori bo’ladi 
+ 
++++++ 
+ 
+Model murakkab bo’lsa variance qanday bo’ladi? 
+==== 
+# 
+Yuqori, model o’rgatuvchi tanlamaga mostlashib qoladi va test to’plamda xatoligi yuqori bo’ladi ==== 
+Quyi, model o’rgatuvchi tanlamaga mostlashib qoladi va test to’plamda xatoligi past bo’ladi ==== 
+To’g’ri javob yo’q 
+==== 
+Variance ning quyi yoki yuqori bo’lishi model murakkabligiga bog’liq emas. 
+ 
++++++ 
+ 
+Uy narxini bashorat qilish uchun mashinali o’qitishning qaysi algoritmidan foydalanadi 
+==== 
+# 
+Chiziqli regressiya 
+==== 
+Logistik regressiya 
+==== 
+Kmeans 
+==== 
+SVM 
+ 
++++++ 
+ 
+O’ratuvchi tanlamadagi test to’plam bu? 
+==== 
+# modelni testlash uchun ishlatiladi 
+==== 
+modelni o’qitish uchun ishlatiladi 
+==== 
+Modelni o’qitish davomida model parametrlarini sozlash uchun ishlatiladi 
+==== 
+Bu turdagi o’rgatuvchi tanlamadan foydalanilmaydi 
+ 
++++++ 
+ 
+O’rgatuvchi tanlamada normallashtirish tushunchasi bu? 
+==== 
+# 
+O’ratuvchi tanlamdagi qiymatlarni bir xil shkalaga o’tkazish 
+==== 
+O’ratuvchi tanlamdagi qiymatlarni turli xil shkalaga o’tkazish 
+==== 
+O’ratuvchi tanlamdagi qiymatlarni faqat [0,1] shkalaga o’tkazish 
+==== 
+O’ratuvchi tanlamdagi qiymatlarni faqat [-1,1] shkalaga o’tkazish 
+ 
++++++ 
+ 
+Logistik regressiya masalasida asosan qaysi aktivlashtirish funksiyasidan foydalaniladi? 
+==== 
+# 
+Sigmoid 
+==== Tanh 
+==== 
+ReLU 
+==== 
+Sigmoid va ReLU 
+ 
++++++ 
+ 
+Nima uchun o’rgatuvchi tanlama normallashtiriladi? 
+==== 
+# 
+Obyektni xarakterlovchi xususiyatlari bir xil shkalaga olib kelish orqali ularning ta’sir kuchini barobarlashtirish 
+==== 
+Obyektni xarakterlovchi xususiyatlari faqat [0,1] shkalaga olib kelish orqali ularning ta’sir kuchini barobarlashtirish 
+==== 
+Obyektni xarakterlovchi xususiyatlari faqat [-1,1] shkalaga olib kelish orqali ularning ta’sir kuchini barobarlashtirish 
+==== 
+Obyektni xarakterlovchi xususiyatlari turli xil shkalaga olib kelish orqali ularning ta’sir kuchini barobarlashtirish 
+ 
++++++ 
+ 
+Validation dataset qayerda ishlatiladi? 
+==== 
+# 
+Modelni qurish davomida paramertlarni sozlashda 
+==== 
+Model qurib bo’linganidan so’ng aniqlikni baholashda 
+==== 
+To’g’ri javob yo’q 
+==== 
+Validation datasetdan foydalanilmaydi 
+ 
++++++ 
+ 
+Klasterlash bu ? 
+==== 
+# 
+O’qituvchisiz o’qitish algoritmi asosida obyektlarni xarakterlovchi o’xshash xususiyatlari asosida guruhlash 
+==== 
+O’qituvchili o’qitish algoritmi asosida obyektlarni xarakterlovchi o’xshash xususiyatlari asosida guruhlash ==== 
+Mashinali o’qitishda buday tushuncha yo’q. 
+==== 
+Logistik regressiya asosida amalga oshiriladigan mashinali o’qitish algoritmi 
+ 
++++++ 
+ 
+KNN algoritmida k qiymat nimani xaratterlaydi? 
+==== 
+# k ta eng yaqin qo’shnini 
+==== k ta eng uzoq qo’shnini 
+==== 
+O’qitish qadami 
+==== 
+O’qitishlar sonini 
+ 
++++++ 
+ 
+Logistik regressiyada qaror qabul qilishimiz uchun modeldan olingan qiymat qaysi bo’sag’a qiymati orqali solishtiriladi? 
+==== 
+# 
+0.5 
+==== 
+0 
+==== 
+1 
+==== 
+-1 va 1 
+ 
++++++ 
+ 
+Nima uchun logistik regressiyada sigmoid funksiyadan foydalaniladi? 
+==== 
+# qiymatlarni (0,1) oraliqda keltirish 
+==== qiymatlarni [-1,1] oraliqda keltirish ==== qiymatlarni [0,1] oraliqda keltirish 
+==== 
+qiymatlarni (-1,1) oraliqda keltirish 
+ 
++++++ 
+ 
+Logistik regressiyada qaror chegrasi uchun topilgan modeldan  olingan qiymat qaysi bo’sag’a qiymati orqali solishtiriladi va qaror qabul qilinadi? 
+==== 
+# 
+0 
+==== 
+1 
+==== 
+0.5 
+==== 
+-1 va 1 
+ 
++++++ 
+ 
+SVM algoritmida suppor vectors bu? 
+==== 
+# 
+Sinflashtirishnig chegara sohasi bo’lib, eng yaqin tanlanmalar uni xarakterlaydi 
+==== 
+Sinflashtirishnig chegara sohasi bo’lib, eng uzoq tanlanmalar uni xarakterlaydi 
+==== 
+Sinflashtirishnig chegara sohasi bo’lib, eng yaqin tanlanmalar uni xarakterlamaydi 
+==== 
+Sinflashtirishnig chegara sohasi bo’lib, eng uzoq tanlanmalar uni xarakterlamaydi 
+ 
++++++ 
+ 
+SVM algoritmidagi hisoblaanadigan orqaliq (margin) qanday bo’lsa model ishonchli deb topiladi? 
+==== 
+# 
+Oraliq eng kattta bo’lsa 
+==== 
+Oraliq eng kichik bo’lsa 
+==== 
+Oraliq hech narsani anglatmaydi 
+==== 
+To’gri javob yo’q 
+ 
++++++ 
+ 
+SVM algoritmida yadro(kernel) funksiyalari nima uchun xizmat qiladi? 
+==== 
+# 
+Kiruvchi xususiyatlarni ma’lum o’lchov sohasidan boshqasiga o’zgartirish uchun xizmat qiladi. Misol uchun 1D -&gt; 2D 
+==== 
+Kiruvchi xususiyatlarni 1D o’lchov sohasidan 2D o’lchov sohasiga o’tkazish uchun xizmat qiladi 
+==== 
+Kiruvchi xususiyatlarni 2D o’lchov sohasidan 1D o’lchov sohasiga o’tkazish uchun xizmat qiladi 
+==== 
+Kiruvchi xususiyatlarni 2D o’lchov sohasidan 3D o’lchov sohasiga o’tkazish uchun xizmat qiladi 
+ 
++++++ 
+ 
+SVM orqali .. 
+==== 
+# 
+Faqat bir nechta  sinfga tegishli bo’lgan obyektlar sinflanadi 
+==== 
+Faqat ikkita sinfga tegishli bo’lgan obyektlar sinflanadi 
+==== 
+Faqat regressiya masalasini yechish mumkin 
+==== 
+Ham sinflashrish, ham regressiya masalasini ishlash mumkin. 
+ 
++++++ 
+ 
+Modelni o’qitish uchun o’quv tanlanma (dataset) qanday turlarga bo’lindi  
+==== 
+# training, validation, testing 
+==== 
+testing, value-x, training 
+==== validation, labels, training 
+==== 
+labels, validation, testing 
+ 
++++++ 
+ 
+O’qitish uchun ma’lumotlar orasidan ortiqcha yoki ahamiyati past bo’lgan, model turg’unligiga ta’sir qiluvchi ma’lumotlarni olib tashlash jarayoni nima deb ataladi  
+==== 
+# 
+Ma’lumotlarni tozalash (Data cleaning) 
+==== 
+Xususiyatlarni aniqlash (Feature detection) 
+==== 
+Ma’lumotlarni o’chirish (Data deletion) 
+==== 
+Ma’lumotlar turini aniqlash (Data formatting) 
+ 
++++++ 
+ 
+Neyron tarmoqlarida sinflashtirish masalasini yechishda chiquvchi qatlamda qaysi turdagi aktivlash funksiyasidan foydalaniladi 
+==== 
+# 
+Softmax 
+==== 
+Sigmoid 
+==== 
+ReLu 
+==== 
+To’g’ri javob yo’q 
+ 
++++++ 
+ 
+Logistik regression model nima uchun ishlatiladi 
+==== 
+# 
+Sinflashtirsh masalasini yechish uchun 
+==== 
+Klasterlash masalasini ishlash uchun 
+==== 
+Neyron tarmoqni qurish uchun 
+==== 
+Qiymatni bashoratlash uchun  
+ 
++++++ 
+ 
+Numpy kutubxonasidagi polyfit() funksiyasi nima uchun ishlatiladi? 
+==== 
+# 
+Chiziqli regressiya uchun model paramertlarini aniqlash uchun 
+==== 
+Loginstik  regressiya uchun model paramertlarini aniqlash uchun 
+==== 
+Chiziqli va logistik   regressiya uchun model paramertlarini aniqlash uchun 
+==== 
+Polynom funksiya yaratish uchun 
+ 
++++++ 
+ 
+Numpy kutubxonasidagi poly1d() funksiyasi nima uchun ishlatiladi? 
+==== 
+# 
+Berilgan parametrlar asosida polinomal  funksiya hosil qilish 
+==== 
+Berilgan parametrlar asosida polinomal  Class  hosil qilish 
+==== 
+Berilgan parametrlar asosida logistik regressiya modelini qurish 
+==== 
+Berilgan parametrlar asosida giperbolik  regressiya modelini qurish 
+ 
++++++ 
+ 
+Neyron tarmoqlarini qurishga mo’ljallangan python kutubxonalarini ko'rsating. 
+==== 
+# 
+Numpy, keras, tensorflow 
+==== 
+Numpy, pandas, keras 
+==== 
+Tensorflow, numpy, pandas 
+==== 
+Python, Matlab, Octave 
+ 
++++++ 
+ 
+Mashinani o’qitish jarayonida ma’lumotlarga qanday dastlabki ishlov beriladi?  
+==== 
+# 
+Format, Data Cleaning, Feature Extraction 
+==== 
+Data Cleaning, Resizing, , Feature Extraction 
+==== 
+Resizing, Feature Extraction, Format 
+==== 
+Format, Resizing, Data Cleaning 
+ 
++++++ 
+ 
+Regression tahlilni qanday usullar asosida amalga oshiriladi.  
+==== 
+# chiziqli, nochiziqli va logistik regressiya usullari asosida 
+==== sintaktik usullar asosida 
+==== dinamik usillar asosida 
+==== semantik usullari asosida 
+ 
++++++ 
+ 
+Muammoni aniqlash, ma’lumotlarni tayyorlash, algoritmni ishlab chiqish va baholash, natijaviy ma’lumotlar aniqligini oshirish va yakuniy natijani taqdim qilish – bular qanday jarayonning bosqichlari hisoblanadi  
+==== 
+# 
+Mashinali o’qitish  
+==== 
+Chuqur o’qitish 
+==== 
+Regression tahlil 
+==== 
+Statistik tahlil 
+ 
++++++ 
+ 
+Keras bu – ...  
+==== 
+# tensorflow asosiga qurilgan ochiq kodli neyron tarmoq uchun mo’ljallangan kutubxona 
+==== numpy asosiga qurilgan ochiq kodli neyron tarmoq uchun mo’ljallangan kutubxona 
+==== ochiq kodli neyron tarmoq uchun mo’ljallangan dasturiy vosita 
+==== matplotlib asosiga qurilgan ochiq kodli neyron tarmoq uchun mo’ljallangan kutubxona 
+ 
++++++ 
+ 
+Tensorflow bu – ... 
+==== 
+# 
+Python kutubxonasi bo’lib, neyron tarmoqlarini hosil qilishga mo’ljallangan. 
+==== 
+Matlab kutubxonasi bo’lib, neyron tarmoqlarini hosil qilishga mo’ljallangan. 
+==== 
+Ocatev kutubxonasi bo’lib, neyron tarmoqlarini hosil qilishga mo’ljallangan. 
+==== 
+Python kutubxonasi bo’lib, neyron tarmoqlarini hosil qilishga mo’ljallanmagan. 
+ 
++++++ 
+ 
+Sklearn bu - … 
+==== 
+# 
+Python dasturlash tilidagi maxsus kutubxona bo’lib, mashinali o’qitish algoritmlarini amalga oshirishga mo’ljallangan maxsus paket 
+==== 
+Matlabning maxsus paketi bo’lib, mashinali o’qitish algoritmlarini amalga oshirishga mo’ljallangan hisoblanadi 
+==== 
+Python dasturlash tilidagi maxsus kutubxona bo’lib, o’zini o’zi o’qitadigan mashinali o’qitish algortimlarini ishlab chiqishga mo’ljallangan 
+==== 
+Python dasturlash tilidagi maxsus kutubxona bo’lib, mashinali o’qitishning o’qituvchili algoritmlarini amalga oshirishga mo’ljallangan maxsus paket 
+ 
++++++ 
+ 
+Chiziqli va logistik regression model qurilayotganda bitta o’rgatuvchi tanlamadan foydalansa bo’ladimi? 
+==== 
+# 
+Ha, faqat yorliqlari uchun ikkita qiymat saqlangan bo’lsa 
+==== 
+Ha, regression model uchun hamma vaqt dataset bir xilda bo’ladi. 
+==== 
+Buning imkoni yo’q 
+==== 
+To’g’ri javob yo’q 
+ 
++++++ 
+ 
+Chiziqli regresiya va Logistik regresiya uchun Cost funksiyasi bir xilda bo’ladimi? 
+==== 
+# 
+Yoq 
+==== 
+Ha 
+==== 
+Logistik regressiyada cost funksiyasi bo’lmaydi 
+==== 
+Chiziqli regressiyada cost funksiyasi bo’lmaydi 
+ 
++++++ 
+ 
+Python ning scipy kutubxonasidan qaysi  Classs chiziqli regressiya modelini qurishda ishlatiladi 
+==== 
+# stats ==== sklearn ==== numpy ==== 
+ployfit 
+ 
++++++ 
+ 
+Python sklearn kutubxonasidagi qaysi Classs chiziqli regressiya modelini qurishda ishlatiladi 
+==== 
+# 
+LinearRegression 
+==== 
+Polyfit 
+==== poly1d 
+==== 
+Linear_model 
+ 
++++++ 
+ 
+Chiziqli regressiyada modelni murakkab tanlansa qaysi turdagi muammo yuzaga keladi 
+==== 
+# 
+Owerfitting 
+==== 
+Underfitting 
+==== 
+Model aniq ishlaydigan bo’lib, shakllanadi. 
+==== 
+Muammo sodir bo’lmaydi 
+ 
++++++ 
+ 
+Chiziqli regressiyada modelni sodda tanlansa qaysi turdagi muammo yuzaga keladi 
+==== 
+# 
+Underfitting 
+==== 
+Owerfitting 
+==== 
+Model ishonchli, hech qanaday muammo yo’q 
+==== 
+Muammo sodir bo’lmaydi 
+ 
++++++ 
+ 
+Chiziqli regression modelni qurib bo’lganimizdan so’ng modelni train dataset bilan testlanganda 65% aniqliq va test dataset bilan testlaganimizda 55% aniqlik bersa, qaysi turdagi mauammo sodir bo’lmoqda  ==== 
+# 
+Underfitting 
+==== 
+Owerfitting 
+==== 
+Model ishonchli, hech qanaday muammo yo’q 
+==== 
+Everfitting 
+ 
++++++ 
+ 
+Chiziqli regression modelni qurib bo’lganimizdan so’ng modelni train dataset bilan testlanganda 25% aniqliq va test dataset bilan testlaganimizda 95% aniqlik bersa, qaysi turdagi mauammo sodir bo’lmoqda  ==== 
+# 
+Underfitting 
+==== 
+Owerfitting 
+==== 
+Model ishonchli, hech qanaday muammo yo’q 
+==== 
+Everfitting 
+ 
++++++ 
+ 
+KMaens algoritmida qo’llaniladigan ikki nuqta orasidagi masofa … deb yuritiladi.Nutqlar o’rniga mos variantni qo’ying. 
+==== 
+# 
+Euclidean masofasi 
+==== 
+Chebyshev masofasi  
+==== 
+Manhattan masofasi  
+==== 
+Minkowski masofasi  
+ 
++++++ 
+ 
+Gradient tushish algoritmidagi ‘learning rate’ parameter nimani xarakterlaydi? 
+==== 
+# 
+O’qish qadamini 
+==== 
+O’qishitda takrorlanishlar sonini 
+==== 
+To’g’ri javob yo’q 
+==== 
+Model aniqligini 
+ 
++++++ 
+ 
+UCI Machine Learning Repository nima ? 
+==== 
+# 
+Mashinili o’qitishning ochiq manbali datasetlarini qidirishga mo’ljallangan tizim 
+==== 
+GitHub  Repository 
+==== 
+Gitlab  Repository 
+==== 
+Kaggle  Repository 
+ 
++++++ 
+ 
+Google Dataset Search qancha ma’lumotni qamrab oladi? 
+==== 
+# 
+25 mln 
+==== 
+250mln 
+==== 
+15mln 
+==== 
+6mln 
+ 
++++++ 
+ 
+Python array bu - 
+==== 
+# bir tipdagi (bir xil ma’lumotlar toifasiga tegishli) elementlar to’plamidan 
+==== turli tipdagi elementlar to’plamidan iborat dinamik massiv 
+==== turli tipdagi elementlar to’plamidan iborat statik massiv 
+==== 
+To’g’ri javob yo’q 
+ 
++++++ 
+ 
+Python list bu - 
+==== 
+# turli tipdagi elementlar to’plamidan iborat dinamik massiv 
+==== bir tipdagi (bir xil ma’lumotlar toifasiga tegishli) elementlar to’plamidan iborat dinamik massiv 
+==== turli tipdagi elementlar to’plamidan iborat statik massiv 
+==== 
+To’g’ri javob yo’q 
+ 
++++++ 
+ 
+Python tuple bu - 
+==== 
+# turli tipdagi elementlar to’plamidan iborat statik massiv 
+==== 
+bir tipdagi (bir xil ma’lumotlar toifasiga tegishli) elementlar to’plamidan iborat dinamik massiv 
+==== turli tipdagi elementlar to’plamidan iborat statik massiv 
+==== 
+To’g’ri javob yo’q 
+ 
++++++ 
+ 
+Mashinali o’qitishda samaradorlikni baholash uchun qanday matritsadan foydalaniladi?  
+==== 
+# 
+Tartibsizlik matritsasi (confusion matrix) 
+==== 
+Aniqliq matritsasi (accuracy matrix) 
+==== 
+Xatolik matritsasi (loss matrix) 
+==== 
+Barchasi to’g’ri 
+ 
++++++ 
+ 
+pip freeze 
+==== 
+# 
+Environment o’rnatilgan barcha paketlar ro’yxatini chop qiladi 
+==== 
+Environment  o’rnatilgan eng oxirgi paketlar ro’yxatini chop qiladi 
+==== 
+Environment  o’rnatilgan eng oxirgi 10 ta paket ro’yxatini chop qiladi 
+==== 
+Environment o’rnatilgan mashinali o’qitishga xizmat qiladigan paketlar ro’yxatini chop qilish 
+ 
++++++ 
+ 
+pip install numpy as np 
+==== 
+# 
+Xatolik sodir bo’ladi 
+==== 
+Numpy kutubxonasi o’rnatiladi 
+==== 
+Numpy kutubxonasi yuklash va quyida uni np deb yuritish mumkin 
+==== 
+To’g’ri javob yo’q 
+ 
++++++ 
+ 
+import numpy as nb 
+==== 
+# 
+Numpy kutubxonasi yuklash va quyida uni nb deb yuritish mumkin 
+==== 
+Xatolik sodir bo’ladi 
+==== 
+Numpy kutubxonasi o’rnatiladi 
+==== 
+Numpy kutubxonasi yuklash va quyida uni np deb yuritish mumkin 
+ 
++++++ 
+ 
+Agar mashinali o’qitish  qo’llaniladigan  sklearn kutubxonasi o’rnatilmagan bo’lsa uni qanday o’rnatish mumkin. 
+==== 
+# 
+Barchasi to’g’ri ==== 
+pip install  sklearn 
+==== conda install scikit-learn 
+==== 
+pip install  scikit-learn 
+ 
++++++ 
+ 
+O’rgatuvchi tanlamasiz(dataset siz) mashinali o’qitish algoritmlarini ishlata olamizmi 
+==== 
+# 
+Imkoni yoq 
+==== 
+Ha, albatta 
+==== 
+Ba’zan 
+==== 
+To’g’ri javob yo’q 
+ 
++++++ 
+ 
+Python muhitida neyron tarmoq qurish uchun qaysi paketlardan foydalaniladi? 
+==== 
+# keras, tensorflow  ==== tensorflow, pandas 
+==== numpy, matplotlib 
+==== pandas, opencv 
+ 
++++++ 
+ 
+Keras muhitida modelni testlash uchun mavjud funksiyalardan qaysi biri ishlatiladi? 
+==== 
+# 
+fit() 
+==== compile() ==== 
+evaluate() ==== 
+test() 
+ 
++++++ 
+ 
+O’qituvchili o’qitish (supervised learning) nima? 
+==== 
+# modelni o’qitish uchun ma’lumotlar bilan birgalikda ularning belgisini (data+label) ham ishlatish 
+==== modelni o’qitish uchun ma’lumotlarni belgisisiz (data without label) ishlatish 
+==== modelni o’qitish uchun tasvir ma’lumotlaridan (image) foydalanish 
+==== 
+modelni o’qitish uchun faqat ma’lumotlar belgisini (label) ishlatish 
+ 
++++++ 
+ 
+Keras muhitida qurilgan neyron tarmoqda joriy qatlam uchun faollashtirish funksiyasini qo’shishda quyidagilarning qaysi biridan foydalaniladi? 
+==== 
+# model.add(Activation(‘relu’)) 
+==== model.insert(Activation(‘relu’)) 
+==== model.function(Activate(‘relu’)) 
+==== model.add(ActiveFunction(‘relu’)) 
+ 
++++++ 
+ 
+O’qituvchisiz (unsupervised) o’qitish algortimlari to’g’ri ko’rsatilgan javobni ko’rsating? 
+==== 
+# k-means clustering, hierarchical clustering, independent component analysis 
+==== 
+linear regression, nearest neighbor, random forest, decision tree 
+==== k-means clustering, deep learning, logistic regression, random forest 
+==== k-nn, decision tree, linear regression, k-means clustering 
+ 
++++++ 
+ 
+O’qituvchisiz o’qitish (unsupervised learning) nima? 
+==== 
+# modelni o’qitish uchun ma’lumotlarni belgisisiz (data without label) ishlatish 
+==== 
+modelni o’qitish uchun faqat ma’lumotlar belgisini (label) ishlatish 
+==== modelni o’qitish uchun ma’lumotlar bilan birgalikda ularning belgisini (data+label) ham ishlatish 
+==== modelni o’qitish uchun tasvir ma’lumotlari va ularning belgilaridan (image+label) foydalanish 
+ 
++++++ 
+ 
+Sigmoid funksiyasini hisoblash formulasini ko’rsating? 
+==== 
+# sig(x)=1/(1+exp(-x)) 
+==== sig(x)=1/(1-exp(x)) 
+==== sig(x)=1/exp(-x) ==== sig(x)=1/exp(x) +++++ 
+ 
+Mashinali o’qitish nima? 
+==== 
+# kompyuter dasturining ma’lumotlarni o’qib olish asosida xususiyatlarni o’rganish qobiliyatidir 
+==== faqat kompyuter o’yinlarini yaratish uchun dastur xususiyatlarni o’rganish qobiliyatidir 
+==== bu robotni o’rgatishning an’anaviy usuli 
+==== kompyuter dasturlarini lug’at yordamida o’qitish usuli 
+ 
++++++ 
+ 
+Pythonda massivni e’lon qilish uchun qanday toifalardan foydalaniladi? 
+==== 
+# array, matrix ==== 
+tuple, arr 
+==== 
+list, tuple 
+==== 
+arr, list 
+ 
++++++ 
+ 
+O’qituvchili o’qitish (Supervised learning) – bu .. ? 
+==== 
+# bu modelni xususiyatlari aniq bo’lgan ma’lumotlar bilan o’qitish .  ==== 
+Bu – modelning aniqligini aniqlash algoritmi 
+==== 
+Ma’lumotlarga ishlov berish dasturi 
+==== 
+Oddiy algoritm 
+ 
++++++ 
+ 
+…… bu ikkita qatlamdan iborat ya’ni kiruvchi va chiquvchi qatlamdan iborat bo’lgan neyronni hisoblash tugunidir. Nuqtalar o’rniga quyidagilardan mos keldiganini qo’ying? 
+==== 
+# perceptron  ==== sigmoid funksiyasi 
+==== neyron 
+==== 
+ReLU funksiyasi 
+ 
++++++ 
+ 
+Regressiya nima? 
+==== 
+# ma’lumotlarni intellektual tahlil qilish usullaridan biri 
+==== ma’lumotlarni ustida arifmetik usullaridan biri 
+==== 
+ma’lumotlarni raqamli ishlov berish usullaridan biri 
+==== ma’lumotlarni jamlash usullaridan biri +++++ 
+ 
+Python muhitida for sikl operatorida ishlatiladigan for i in range(0,10,2) ifodasida i indeks o’zgaruvchisiga qanday qiymatlar keladi? 
+==== 
+# 
+0 2 4 6 8 
+==== 
+0 2 10 
+==== 
+0 10 
+==== 
+2 4 6 8 10 
+ 
++++++ 
+ 
+Supervised o’qitish algoritmlari asosan qanday masalani yechishga qaratilgan? 
+==== 
+# regressiya va sinflashtirish masalasiga 
+==== statistik usullar yordamida ma’lumotlarni ajratish masalasiga 
+==== statistik usullar yordamida ma’lumotlarni sinflashtirish masalasiga 
+==== sinflashtirish va segmentlash masalasiga 
+ 
++++++ 
+ 
+Neyron tarmoqda qanday turdagi qatlamlar (layers) bo’lishi mumkin? 
+==== 
+# 
+kiruvchi, chiquvchi, yashirin 
+==== 
+kiruvchi, yashirin, oraliq 
+==== qabul qiluvchi, hisoblovchi, chiquvchi 
+==== kiruvchi, qabul qiluvchi, chiquvchi 
+ 
++++++ 
+ 
+Chiziqli regression model nima uchun ishlatiladi? 
+==== 
+# bashorat qilish uchun 
+==== mantiqiy model qurish uchun 
+==== sinflashtirish masalasini yechish uchun 
+==== segmentlash masalasini yechish uchun 
+ 
++++++ 
+ 
+Neyron tarmoq nima? 
+==== 
+# bu inson miyasining ishlash faoliyatini qisman aks ettiruvchi tuzilma 
+==== bu inson miyasining ishlash faoliyatini qisman aks ettiruvchi dataset 
+==== bu inson miyasining ishlash faoliyatini butunlay aks ettiruvchi dataset 
+==== 
+bu inson miyasining ishlash faoliyatini butunlay aks ettiruvchi tuzilma 
+ 
++++++ 
+ 
+Sun’iy intellekt deganda nimani tushunasiz? 
+==== 
+# insonning onggi kabi fikrlovchi dastur 
+==== oddiy kompyuter dasturi 
+==== qaror qabul qiluvchi ilovalar 
+==== bunday termin fanda mavjud emas 
+ 
++++++ 
+ 
+Sun'iy intellekt bu …? 
+==== 
+# 
+bu kompyuterda insonning aqlli xatti harakatlarini qanday amalga oshirishni o'rganadigan tadqiqot sohasi ==== 
+bu kompyuterda insonning jismoniy xatti harakatlarini qanday amalga oshirishni o'rganadigan tadqiqot sohasi ==== 
+bu kompyuterda insonning bialogik xatti harakatlarini qanday amalga oshirishni o'rganadigan tadqiqot sohasi 
+==== 
+To’g’ri javob yo’q  
+ 
++++++ 
+ 
+Keras kutubxonasidagi Sequential() nima vazifani bajaradi? 
+==== 
+# 
+neyron tarmoq modelini qurish uchun dastlabki obyektni yaratadi 
+==== ketma-ket kamida 2 qatlamdan iborat neyron tarmoq quradi 
+==== neyron tarmoq modelini o’qitish uchun ishlatiladi 
+==== qurilgan neyron tarmoqni ketma-ket ko’rinishga keltiradi 
+ 
++++++ 
+ 
+Python muhitida for sikl operatorida ishlatiladigan for i in range(10) ifodasida i indeks o’zgaruvchisiga qanday qiymatlar keladi? 
+==== 
+# 
+0 1 2 3 4 5 6 7 8 9 
+==== 
+0 1 2 3 4 5 6 7 8 9 10 
+==== 
+0	9 
+==== 
+1	2 3 4 5 6 7 8 9 10 
+ 
++++++ 
+ 
+Qanday turdagi faollashtirish funksiyalari mavud? 
+==== 
+# 
+ReLU, sigmoid, softmax 
+==== loss, sigmoid, ReLU ==== 
+ReLU, cost, softmax 
+==== 
+cost, loss, sigmoid 
+ 
++++++ 
+ 
+Chuqur o’qitish – bu? 
+==== 
+# bu ko'p qatlamli neyron tarmoqlar asosida obyekt xususiyatlarini tushunishga qaratilgan jarayondir 
+==== bu bir qatlamli neyron tarmoqlar asosida obyekt xususiyatlarini tushunishga qaratilgan jarayondir 
+==== bu bu modelni qurib olish uchun amalga oshiriladigan o’qitish jarayonidir 
+==== bu modelni tezroq va aniqroq qurib olish uchun amalga oshiriladigan jarayon 
+ 
++++++ 
+ 
+Python muhitida turli xil matematik funksiya grafiklarini va tasvirlarni vizuallashtirish uchun ishlatiladigan paket qaysi?  
+==== 
+# matplotlib ==== keras ==== pandas ==== 
+numpy 
+ 
++++++ 
+ 
+Sun’iy neyron tarmoq tashkil etuvchilarini ko’rsating? 
+==== 
+# node, input, weights, output 
+==== cell body, dendrites, synapse, axon 
+==== input, dendrites, synapse, output 
+==== synapse, axon, weights, node 
+ 
++++++ 
+ 
+Python muhitida scatter() funksiyasi qanday vazifani bajaradi? 
+==== 
+# berilgan x,y to'plam bo’yicha 2 o’lchovli grafigini chizish uchun ishlatiladi 
+==== chiziqli regression model koeffitsentlarini (ko’pi bilan 3 ta) hisoblaydi 
+==== polinomial regression model koeffitsentlarini hisoblaydi 
+==== qurilgan model koeffitsentlari bo’yicha bashorat qilinadigan qiymatlarni hisoblaydi 
+ 
++++++ 
+ 
+pip install tensorflow buyrug’i asosida nima sodir bo’ladi? 
+==== 
+# tensorflow kutubxonasi o’rnatiladi 
+==== 
+keras va tensorflow kutubxonasi o’rnatiladi 
+==== tensorflow kutubxonasi chaqiriladi 
+==== keras va tensorflow kutubxonasi chaqiriladi 
+ 
++++++ 
+ 
+Biologik neyron tarmoq tashkil etuvchilarini ko’rsating? 
+==== 
+# cell body, dendrites, synapse, axon 
+==== input, dendrites, synapse, output 
+==== node, input, weights, output 
+==== synapse, axon, weights, node 
+ 
++++++ 
+ 
+Dataset bu nima? 
+==== 
+# bu o’qitish uchun kerakli bo’lgan ma'lumotlar to'plamidir 
+==== bu o’qitish uchun kerakli bo’lgan neyronlar to'plamidir 
+==== bu o’qitish uchun kerakli bo’lgan og’irliklar to'plamidir 
+==== bu o’qitish uchun kerakli bo’lgan neyron tarmoq qatlamlar to'plamidir +++++ 
+ 
+Convolutional neural networks (CNN) – bu? 
+==== 
+# bu ko'p qatlamli neyron tarmoq asosida qurilgan chuqur o’qitishning maxsus arxitekturasi 
+==== bu bir qatlamli neyron tarmoq asosida qurilgan chuqur o’qitishning maxsus arxitekturasi 
+==== bu ko’p qatlamli neyron tarmoq asosida qurilgan chuqur o’qitishning maxsus usuli 
+==== bu bir qatlamli neyron tarmoq asosida qurilgan chuqur o’qitishning maxsus usuli 
+ 
++++++ 
+ 
+Sun’iy intellektga asoslangan dasturlarni ishlab chiqishdan maqsad nima? 
+==== 
+# mustaqil fikrlovchi va qaror qabul qiluvchi dasturlarni hayotga tadbiq qilish 
+==== vaqtni maroqli o‘tkazish 
+==== insonlarning yashash darajasini yaxshilash 
+==== 
+ortiqcha sarf-xarajatni kamaytirish 
+ 
++++++ 
+ 
+Neyron tarmoqdagi tugun qiymati -5 ga teng. Ushbu tugun ReLU funksiyasi yordamida faollashtirilsa qanday qiymatga o’zgaradi? 
+==== 
+# 
+0 
+==== 
+5 
+==== 
+-5 
+==== 
+3,5 
+ 
++++++ 
+ 
+Mashinani o’qitish turlari to’g’ri ko’rsatilgan javobni tanlang? 
+==== 
+# supervised, unsupervised, Semi-supervised, reinforcement 
+==== regressiya, Ehtimollar nazariyasi, Supervised, unsupervised 
+==== supervised, unsupervised, Regressiya, Sinflashtirish 
+==== regressiya, Sinflashtirish, Semi-supervised, reinforcement 
+ 
++++++ 
+ 
+Neyron tarmoqlari bu…? 
+==== # 
+Neyron tarmoqlari juda ko’p muhim xususiyatlarga ega, ammo asosiysi bu o’rganish qobiliyatidir. 
+==== 
+Neyron tarmoqlari ma’lumotlarni bog’lash uchun xizmat qiladi. 
+==== 
+Bunday tarmoq mavjud emas 
+==== 
+Ikkilik kod sifatidagi algoritm 
+ 
++++++ 
+ 
+Chiziqli regressiyaga to’g’ri ta’rifni toping? 
+==== 
+# 
+Chiziqli regressiya kuzatilgan ma'lumotlarga chiziqli tenglamani bog’lash orqali ikkita o'zgaruvchi o'rtasidagi munosabatni modellashtirishga aytiladi. 
+==== 
+Chiziqli regressiya ma’lumotlarni klassifikatsiyalaydi. 
+==== 
+Chiziqli Regressiya bu tanlangan ma’lumotlar ichidan kerakli ma’lumotni qidirish algoritmi. 
+==== 
+To’g’ri javob yo’q. 
+ 
++++++ 
+ 
+Quyidagi usullardan qaysi biri har qanday chiziqli bo'linadigan ma'lumotlar to'plamida nol o'qitish(zero training) xatosiga erishishi mumkin? 
+==== 
+# 
+KNN 
+==== 
+Qaror daraxti 
+==== 
+SVM(support vector machine) 
+==== 
+CNN 
+ 
++++++ 
+ 
+CNN bu…? 
+==== 
+# 
+Svyortkali neyron tarmoq 
+==== 
+Adamar neyron tarmog’i 
+==== 
+K ta yaqin qo’shnilar 
+==== 
+Qayta murojaat neyron tarmog’i 
+ 
++++++ 
+ 
+KNN bu…? 
+==== 
+# 
+K ta yaqin qo’shnilar  agoritmi 
+==== 
+Svyortkali neyron tarmoq 
+==== 
+Adamar almashtririshli Neyron tarmoq 
+==== 
+To’g’ri javob yo’q 
+ 
++++++ 
+ 
+Sun’iy intellektda mashinani o'qitish uchun to’g’ri ta’rif berilgan qatorni tanlang 
+==== 
+# 
+Sun’iy intellekt - bu inson ongiga taqlid qila oladigan dasturiy ta'minot va uni mashinali o’qitishda aqlli mashinalarga dasturlashning muqobil usulidir. 
+==== 
+Mashinali o’qitish - bu aqlli mashinalarni dasturlashning muqobil usuli. 
+==== 
+Mashinali o’qitish va suniy intellektning maqsadlari juda boshqacha. 
+==== 
+To’g’ri javob yo’q 
+ 
++++++ 
+ 
+O’qituvchisiz o’qitish (unsupervised learning) – bu … ? 
+==== 
+# 
+mashinani o’qitish usulidan biri bo’lib, bunda modelni oldindan aniq bo’lgan ma’lumotlar bilan o’qitish amalga oshirilmaydi, aksincha obyekt parametrlarini (ma'lumotlarni) topish uchun modelga o'z ustida ishlashga imkon yaratib beriladi 
+==== 
+Ma’lumot qidirish algoritmlaridan tashkil topgan tizim 
+==== 
+Bunday o’qitish mavjud emas 
+==== 
+To’g’ri javob yo’q 
+ 
++++++ 
+ 
+Unsupervised learning usulida asosan qanday masala yechiladi? 
+==== 
+# klasterlash ==== normallashtirish 
+==== 
+sinflashtirish 
+==== 
+Signallarga ishlov berish 
+ 
++++++ 
+ 
+O’qituvchisiz o’qitish algoritmlari qaysi? 
+==== 
+# 
+Hierarchical clustering va K-means clustering 
+==== 
+SVM va CNN 
+==== 
+RNN va GMM 
+==== 
+To’g’ri javob yo’q 
+ 
++++++ 
+ 
+Ma’lumotlarni tozalashga to'liq ta'rif berilgan qatorini toping? 
+==== 
+# 
+Ushbu bosqichda ma’lumotlar orasidan ortiqcha yoki ahamiyati past bo’lgan model turg’unligiga ta’sir qiluvchi ma’lumotlar olib tashlanadi. 
+==== 
+Dataset ma’lumotlarini testlash 
+==== 
+To’g’ri javob yo’q 
+==== 
+Qaror daraxtidan ma’lumotlarni olib tashlash 
+ 
++++++ 
+ 
+Xususiyatlarni ajratib olishga to'liq ta'rif berilgan qatorini toping? 
+==== 
+# 
+o’qituvchi to’plamdagi ma’lumotlar xususiyatlari o’rganib chiqiladi va bashoratlash, tashxislash, sinflashtirish, qaror qabul qilish uchun kerakli xususiyatlar ajratib olish 
+==== 
+Qaror qabul qilish daraxti qiymatlari 
+==== 
+Sinflashtirish masalasini yechish algoritmi to’plami 
+==== 
+To’g’ri javob yo’q 
+ 
++++++ 
+ 
+Neyron tarmoqdagi tugun qiymati 0.5 ga teng. Ushbu tugun ReLU funksiyasi yordamida faollashtirilsa qanday qiymatga o‟zgaradi  
+==== 
+# 
+0.5 
+==== 
+1 
+==== 
+0 
+==== 
+2 
+ 
++++++ 
+ 
+Chiziqli regressiya qaysi mashinali o’qitish algoritmlari tarkibiga kiradi? 
+==== 
+# 
+O’qituvchili o’qitish 
+==== 
+O’qituvchisiz o’qitish 
+==== 
+Reinforcementli o'qitish 
+==== 
+To’g’ri javob yo’q 
+ 
++++++ 
+ 
+Neyron tarmoqdagi tugun qiymati 2.5 ga teng. Ushbu tugun ReLU funksiyasi yordamida faollashtirilsa qanday qiymatga o‟zgaradi  
+==== 
+# 
+2,5 
+==== 
+2 
+==== 
+0 
+==== 
+44595 
+ 
++++++ 
+ 
+Sun’iy intellektda mashinani o'qitish uchun to’g’ri ta’rif berilgan qatorni tanlang 
+==== 
+# 
+Sun’iy intellekt - bu inson ongiga taqlid qila oladigan dasturiy ta'minot va uni mashinali o’qitishda aqlli mashinalarga dasturlashning muqobil usulidir. 
+==== 
+Mashinali o’qitish - bu aqlli mashinalarni dasturlashning muqobil usuli. 
+==== 
+Mashinali o’qitish va suniy intellektning maqsadlari juda boshqacha. 
+==== 
+To’g’ri javob yo’q 
+ 
++++++ 
+ 
+Mashinali o’qitish turlari qaysi qatorda to’g’ri berilgan 
+==== 
+# 
+O’qtuvchili va O’qituvchisiz 
+==== 
+Tanlanma 
+==== 
+Ma’lumotlar bazasi 
+==== 
+Chiziqli va logistik 
+ 
++++++ 
+ 
+O’qituvchili o’qitish (Supervised learning) – bu .. ? 
+==== 
+# bu modelni xususiyatlari aniq bo’lgan ma’lumotlar bilan o’qitish .  
+==== 
+Bu – modelning aniqligini aniqlash algoritmi 
+==== 
+Ma’lumotlarga ishlov berish dasturi 
+==== 
+Oddiy algoritm 
+ 
++++++ 
+ 
+O’qituvchisiz o’qitish (unsupervised learning) – bu … ? 
+==== 
+# 
+mashinani o’qitish usulidan biri bo’lib, bunda modelni oldindan aniq bo’lgan ma’lumotlar bilan o’qitish amalga oshirilmaydi, aksincha obyekt parametrlarini (ma'lumotlarni) topish uchun modelga o'z ustida ishlashga imkon yaratib beriladi 
+==== 
+Ma’lumot qidirish algoritmlaridan tashkil topgan tizim 
+==== 
+Bunday o’qitish mavjud emas 
+==== 
+To’g’ri javob yo’q 
+ 
++++++ 
+ 
+Unsupervised learning usulida asosan qanday masala yechiladi? 
+==== 
+# klasterlash ==== normallashtirish ==== 
+sinflashtirish 
+==== 
+Signallarga ishlov berish 
+ 
++++++ 
+ 
+O’qituvchisiz o’qitish algoritmlari qaysi? 
+==== 
+# 
+Hierarchical clustering va K-means clustering 
+==== 
+SVM va CNN 
+==== 
+RNN va GMM 
+==== 
+To’g’ri javob yo’q 
+ 
++++++ 
+ 
+Hozirgi kunda butun dunyoda rivojlanib borayotgan mashinali o’qitish (machine learning), chuqur o’qitish (deep learning) kabi usullar sun’iy intellekt bilan qanday bog’liq  
+==== 
+# 
+hozirda tasvirlardan ob’ektlarni tanib olish,  video nazorat, ovozni tanib olish kabi sohalarda keng foydalaniladi va sun’iy intellekt tizimini yaratishda katta ahamiyat kasb etadi 
+==== 
+faqat ovozni tanib olishda ishlatiladi va sun’iy intellekt tizimini yaratishda deyarli fodalanilmaydi 
+==== tasvirlarni tanib olishda ishlatiladi va sun’iy intellekt tizimini yaratishda foydalaniladi 
+==== 
+faqatgina ma’lumotlarning intellektual tahliliga oid 
+ 
++++++ 
+ 
+Mashinani o’qitish jarayonida ma’lumotlarga qanday dastlabki ishlov beriladi?  
+==== 
+# 
+Format, Data Cleaning, Feature Extraction 
+==== 
+Data Cleaning, Resizing, , Feature Extraction 
+==== 
+Resizing, Feature Extraction, Format 
+==== 
+Format, Resizing, Data Cleaning 
+ 
++++++ 
+ 
+Regression tahlilni qanday usullar asosida amalga oshiriladi.  
+==== 
+# chiziqli, nochiziqli va logistik regressiya usullari asosida 
+==== sintaktik usullar asosida 
+==== 
+dinamik usillar asosida 
+==== semantik usullari asosida 
+ 
++++++ 
+ 
+Muammoni aniqlash, ma’lumotlarni tayyorlash, algoritmni ishlab chiqish va baholash, natijaviy ma’lumotlar aniqligini oshirish va yakuniy natijani taqdim qilish – bular qanday jarayonning bosqichlari hisoblanadi  
+==== 
+# 
+Mashinali o’qitish  
+==== 
+Chuqur o’qitish 
+==== 
+Regression tahlil 
+==== 
+Statistik tahlil 
+ 
++++++ 
+ 
+Keras bu – ...  
+==== 
+# tensorflow asosiga qurilgan ochiq kodli neyron tarmoq uchun mo’ljallangan kutubxona 
+==== numpy asosiga qurilgan ochiq kodli neyron tarmoq uchun mo’ljallangan kutubxona 
+==== ochiq kodli neyron tarmoq uchun mo’ljallangan dasturiy vosita 
+==== matplotlib asosiga qurilgan ochiq kodli neyron tarmoq uchun mo’ljallangan kutubxona 
+ 
++++++ 
+ 
+Tensorflow bu – ... 
+==== # 
+Python kutubxonasi bo’lib, neyron tarmoqlarini hosil qilishga mo’ljallangan. 
+==== 
+Matlab kutubxonasi bo’lib, neyron tarmoqlarini hosil qilishga mo’ljallangan. 
+==== 
+Ocatev kutubxonasi bo’lib, neyron tarmoqlarini hosil qilishga mo’ljallangan. 
+==== 
+Python kutubxonasi bo’lib, neyron tarmoqlarini hosil qilishga mo’ljallanmagan. 
+ 
++++++ 
+ 
+Sklearn bu - … 
+==== 
+# 
+Python dasturlash tilidagi maxsus kutubxona bo’lib, mashinali o’qitish algoritmlarini amalga oshirishga mo’ljallangan maxsus paket 
+==== 
+Matlabning maxsus paketi bo’lib, mashinali o’qitish algoritmlarini amalga oshirishga mo’ljallangan hisoblanadi 
+==== 
+Python dasturlash tilidagi maxsus kutubxona bo’lib, o’zini o’zi o’qitadigan mashinali o’qitish algortimlarini ishlab chiqishga mo’ljallangan 
+==== 
+Python dasturlash tilidagi maxsus kutubxona bo’lib, mashinali o’qitishning o’qituvchili algoritmlarini amalga oshirishga mo’ljallangan maxsus paket 
+ 
++++++ 
+ 
+Chuqur o’qitish qanday tarmoqlari asosida amalga oshiriladi?  
+==== 
+# 
+neyron tarmoqlar asosida 
+==== lokal tarmoqlar asosida ==== global tarmoqlar asosida 
+==== internet tarmoqlar asosida 
+ 
++++++ 
+ 
+Chuqur o’qitish necha asosiy bosqichlardan tashkil topgan?  
+==== 
+# 
+5 
+==== 
+4 
+==== 
+3 
+==== 
+6 
+ 
++++++ 
+ 
+Mashinali o’qitish turlari qaysi qatorda to’g’ri berilgan 
+==== 
+# 
+O’qtuvchili va O’qituvchisiz 
+==== 
+Tanlanma 
+==== 
+Ma’lumotlar bazasi 
+==== 
+Chiziqli va logistik 
+ 
++++++ 
+ 
+Modelni  ham aniq ham aniq  bo’lmagan xususiyatli  ma’lumotlar bilan  o’qitishdir. 
+==== 
+# 
+Semi-supervised learning  
+==== 
+Reinforcement learning 
+==== 
+Unsupervised learning 
+==== 
+Supervised learning 
+ 
++++++ 
+ 
+Modelni xususiyatlari aniq  bo’lmagan ma’lumotlar  bilan  o’qitish 
+==== 
+# 
+Unsupervised learning 
+==== 
+Supervised learning 
+==== 
+Semi-supervised learning  
+==== 
+Reinforcement learning 
+ 
++++++ 
+ 
+Mashinali o’qitishda asosan qaysi instrumental vositalardan foydalaniladi 
+==== 
+# 
+Python, Matlab, Octave 
+==== 
+Python,NLP,Keras 
+==== 
+Numpy,Pandas 
+==== 
+Python,Keras,Pandas 
+ 
++++++ 
+ 
+KNN bu - … 
+==== 
+# 
+Barchasi to’gri 
+==== 
+Klasterlash algoritmi  
+==== 
+Regressiya algoritmi 
+==== 
+Sinflashrirish algoritmi 
+ 
++++++ 
+ 
+Bir o’zgaruvchili chiziqli regressiya bu - …. 
+==== 
+# 
+Bashoratlash uchun obyektni xarakterlovchi bitta xususiyatini olib bashoratlashga xizmat qiladigan model yaratish 
+==== 
+Bashoratlash uchun obyektni xarakterlovchi ko’p sondagi xususiyatlarini olib bashoratlashga xizmat qiladigan model yaratish 
+==== 
+Siflashtirish uchun obyektni xarakterlovchi bitta xususiyatini olib siflashtirishga xizmat qiladigan model yaratish 
+==== 
+Siflashtirish uchun obyektni xarakterlovchi ko’p sondagi xususiyatlarini olib siflashtirishga xizmat qiladigan model yaratish 
+ 
++++++ 
+ 
+Ko’p o’zgaruvchili chiziqli regressiya bu -... 
+==== 
+# 
+Bashoratlash uchun obyektni xarakterlovchi ko’p sondagi xususiyatlarini olib bashoratlashga xizmat qiladigan model yaratish 
+==== 
+Bashoratlash uchun obyektni xarakterlovchi bitta xususiyatini olib bashoratlashga xizmat qiladigan model yaratish 
+==== 
+Siflashtirish uchun obyektni xarakterlovchi bitta xususiyatini olib siflashtirishga  xizmat qiladigan model yaratish 
+==== 
+Siflashtirish uchun obyektni xarakterlovchi ko’p sondagi xususiyatlarini olib siflashtirishga xizmat qiladigan model yaratish 
+ 
++++++ 
+ 
+Logistik regressiya bu? 
+==== 
+# 
+Regression tahlil asosida sinflashtirish masalasini yechish  
+==== 
+Regression tahlil asosida klasterlash  masalasini yechish 
+==== 
+Regression tahlil asosida bashoratlash masalasini yechish 
+==== 
+To’g’ri javob yo’q 
+ 
++++++ 
+ 
+O’ratuvchi tanlamadagi val (validation) to’plam bu? 
+==== 
+# 
+Modelni o’qitish davomida model parametrlarini sozlash uchun ishlatiladi 
+==== modelni o’qitish uchun ishlatiladi 
+==== modelni testlash uchun ishlatiladi 
+==== 
+Bu turdagi o’rgatuvchi tanlamadan foydalanilmaydi 
+ 
++++++ 
+ 
+O’qitish jarayonida regulyarizatsiyalash bu? 
+==== 
+# 
+Modelni o’qitish jarayonida ortiqcha paramertlardan ozod qilish, qisqartirish  
+==== 
+Barcha javob to’g’ri 
+==== 
+Modelni testlash jarayonida ortiqcha paramertlardan ozod qilish, qisqartirish 
+==== 
+Modelni qurish jarayonida ortiqcha paramertlardan ozod qilish, qisqartirish 
+ 
++++++ 
+ 
+Modelni qurishda bo’ladigan Underfitting muammosi bu? 
+==== 
+# 
+Model train to’plmada ham, test to’plamda ham yuqori aniqlik bermaydi. Model sodda tuzilgan.  
+==== 
+Model train to’plmada ham, test to’plamda ham yuqori aniqlik bermaydi. Model murakkab tuzilgan. 
+==== 
+Model train to’plmada yuqori, test to’plamda esa past aniqlik beradi. Model sodda tuzilgan. 
+==== 
+Model train to’plmada yuqori, test to’plamda esa past aniqlik beradi. Model murakkab tuzilgan. 
+ 
++++++ 
+ 
+Model qurishda bo’ladigan Owerfitting muammosi bu? 
+==== 
+# 
+Rasmlarni joylashtirish uchun 
+==== 
+Ma’lumotlarni jadval ko‘rinishida chop etish uchun 
+==== 
+Audioma’lumotlarni joylashtirish uchun 
+==== 
+Matnli ma’lumotlarni joylashtirish uchun 
+ 
++++++ 
+ 
+Mobil ilovadagi element ustiga sichqoncha chap tugmasi bilan bosilganda qaysi metod ishga tushadi? 
+==== # 
+Model train to’plamda yuqori, test to’plamda esa past aniqlik beradi. Model murakkab tuzilgan. 
+==== 
+Model train to’plamda ham, test to’plamda ham yuqori aniqlik bermaydi. Model sodda tuzilgan.  
+==== 
+Model train to’plamda ham, test to’plamda ham yuqori aniqlik bermaydi. Model murakkab tuzilgan. ==== 
+Model train to’plamda yuqori, test to’plamda esa past aniqlik beradi. Model sodda tuzilgan. 
+ 
++++++ 
+ 
+Bias tushunchasi? 
+==== 
+# 
+Modelni train to’plam bilan testlaganda bo’ladigan xatolik 
+==== 
+Modelni test to’plam bilan testlaganda bo’ladigan xatolik 
+==== 
+Modelni train + test to’plam bilan testlaganda bo’ladigangadi umumiy xatolik  
+==== 
+Modelni validation to’plam bilan testlaganda bo’ladigangadi umumiy xatolik 
+ 
++++++ 
+ 
+Variance tushunchasi? 
+==== 
+# 
+Modelni test to’plam bilan testlaganda bo’ladigan xatolik 
+==== 
+Modelni train to’plam bilan testlaganda bo’ladigan xatolik 
+==== 
+Modelni train + test to’plam bilan testlaganda bo’ladigangadi umumiy xatolik 
+==== 
+Modelni validation to’plam bilan testlaganda bo’ladigangadi umumiy xatolik 
+ 
++++++ 
+ 
+Underfitting bu - … 
+==== 
+# 
+Model juda soda. Shuning evaziga model train to’plamda ham, test to’plamda katta xatolik bo’lishiga olib keladi 
+==== 
+Model juda muakkab. Shuning evaziga model train to’plamda ham, test to’plamda katta xatolik bo’lishiga olib keladi 
+==== 
+Model juda soda. Shuning evaziga model train to’plamda yuqori, test to’plamda past xatolik bo’lishiga olib keladi 
+==== 
+Model juda muarkkab. Shuning evaziga model train to’plamda yuqori, test to’plamda past xatolik bo’lishiga olib keladi 
+ 
++++++ 
+ 
+Owerfitting bu - … 
+==== 
+# 
+Model juda muarkkab. Shuning evaziga model train to’plamda past, test to’plamda yuqori xatolik bo’lishiga olib keladi 
+==== 
+Model juda soda. Shuning evaziga model train to’plamda ham, test to’plamda katta xatolik bo’lishiga olib keladi 
+==== 
+Model juda muakkab. Shuning evaziga model train to’plamda ham, test to’plamda katta xatolik bo’lishiga olib keladi 
+==== 
+Model juda soda. Shuning evaziga model train to’plamda yuqori, test to’plamda past xatolik bo’lishiga olib keladi 
+ 
++++++ 
+ 
+Model qurishda bo’ladigan Underfitting muammosi qanday hal qilsa bo’ladi? 
+==== 
+# 
+Modelni murakkabligini oshirib ko’rish kerak 
+==== 
+Modelni murakkabligini pasaytirib  ko’rish kerak 
+==== 
+Bu muammoni hal qilishning imkoni yoq 
+==== 
+Datasetni hajmini kamaytirib ko’rish kerak 
+ 
++++++ 
+ 
+Model qurishda bo’ladigan Owerfitting muammosi qanday hal qilsa bo’ladi? 
+==== 
+# 
+Modelni murakkabligini pasaytirib  ko’rish kerak 
+==== 
+Modelni murakkabligini oshirib ko’rish kerak 
+==== 
+Bu muammoni hal qilishning imkoni yoq 
+==== 
+Datasetni hajmini kamaytirib ko’rish kerak 
+ 
++++++ 
+ 
+O’rgatuvchi tanlama nima? 
+==== 
+# bu o’qitish uchun kerakli bo’lgan ma'lumotlar to'plamidir 
+==== bu o’qitish uchun kerakli bo’lgan neyronlar to'plamidir 
+==== 
+bu o’qitish uchun kerakli bo’lgan og’irliklar to'plamidir 
+==== bu o’qitish uchun kerakli bo’lgan neyron tarmoq qatlamlar to'plamidir 
+ 
++++++ 
+ 
+O’ratuvchi tanlamadagi train to’plam … 
+==== 
+# modelni o’qitish uchun ishlatiladi 
+==== 
+modelni testlash uchun ishlatiladi 
+==== 
+Modelni o’qitish davomida model parametrlarini sozlash uchun ishlatiladi 
+==== 
+Bu turdagi o’rgatuvchi tanlamadan foydalanilmaydi 
+ 
++++++ 
+ 
+Uyning xarakterlovchi xususiyatlari asosida ikkita guruhga(klasterga) (biznes, ekanom) ajratish uchun qaysi mashinali o’qitish algoritmidan foydalaniladi  
+==== 
+# 
+Kmeans 
+==== 
+SVM  
+==== 
+Random Forest  
+==== 
+Logistik regressiya 
+ 
++++++ 
+ 
+KNN algoritmida k ni kichik tanlasak nima sodir bo’ladi? 
+==== 
+# 
+Shovqinga sezgir bo’ladi va sinflashtirishda xatolikka ko’p uchrashi mumkin 
+==== 
+Shovqinga sezgir bo’lmaydi va sinflashtirishda xatolikka ko’p uchrashi mumkin 
+==== 
+KNN algoritmida k parametr yo’q. 
+==== k ni kichik yoki katta tanlash algoritm ishiga ta’sir qilmaydi 
+ 
++++++ 
+ 
+KNN algoritmida k ni katta tanlasak nima sodir bo’ladi? 
+==== 
+# 
+Model qurish vaqti oshib ketadi. Bazan k ning katta tanlanishi sinflashtirishda xatolikka ko’p uchrashi mumkin 
+==== 
+Shovqinga sezgir bo’ladi va sinflashtirishda xatolikka ko’p uchrashi mumkin 
+==== 
+KNN algoritmida k parametr yo’q. 
+==== k ni kichik yoki katta tanlash algoritm ishiga ta’sir qilmaydi 
+ 
++++++ 
+ 
+KNN algoritmida k ta eng yaqin qo’shni qanday aniqlanadi? 
+==== 
+# 
+To’plamdagi barcha elemetlar orasidagi masofa hisoblanib chiqiladi va eng yaqin k tasi tanlanadi ==== 
+Taxminiy random() funksiyasi orqali aniqlanadi 
+==== 
+To’plamdagi k ta elemetlar orasidagi masofa hisoblanib chiqiladi va ular o’sish tartibida saralanadi. 
+==== 
+KNN algoritmida k ta eng yaqin qo’shni tushunchasi yo’q. 
+ 
++++++ 
+ 
+SVM algorimi qaysi masalani yechish uchun xizmat qiladi? 
+==== 
+# 
+Sinflashtirsh  
+==== 
+Chiziqli regressiya 
+==== 
+Klasterlash 
+==== 
+Normallashtirish  
+ 
++++++ 
+ 
+KNN algoritmi qaysi masalani yechish uchun xizmat qiladi 
+==== 
+# 
+Barcha javob to’g’ri 
+==== 
+Sinflashtirish 
+==== 
+Regressiya 
+==== 
+Klasterlash 
+ 
++++++ 
+ 
+KMeans bu - 
+==== 
+# 
+O’qituvchisiz o’qitish algoritmi 
+==== 
+O’qituvchili o’qitish algoritmi 
+==== 
+O’zini o’zi o’qitadigan algoritmi 
+==== 
+to’g’ri javob yo’q  
+ 
++++++ 
+ 
+Kmaens algoritmi qaysi masalani yechish uchun xizmat qiladi 
+==== 
+# 
+Klasterlash 
+==== 
+Barcha javob to’g’ri 
+==== 
+Sinflashtirish 
+==== 
+Regressiya 
+ 
++++++ 
+ 
+Qidiruv tizimlarida sun’iy intellektdan foydalanish mumkinmi  
+==== 
+# ha, mumkin va hozirda keng qo‘llanilmoqda (misol uchun Google, Yandex qidiruv tizimlari) 
+==== qisman amaliy natijalari bor lekin yetarlicha nazariy jihatdan formallashtirilmagan ==== nazariy jihatdan mumkin, lekin hozircha amaliy jihatdan natijalarga erishilmagan 
+==== 
+qidiruv tizimlarida sun’iy intellektdan foydalanish qidiruv vaqtini oshiradi 
+ 
++++++ 
+ 
+Mashinani o’qitish jarayonida ma’lumotlarga qanday dastlabki ishlov beriladi?  
+==== 
+# 
+Ma’lumotlar formatlari bir xillashtiriladi 
+==== 
+Ma’lumotlarni tozalash 
+==== 
+Ma’lumotlardan xususiyatlarni ajratish 
+==== 
+Barchasi to’g’ri 
+ 
++++++ 
+ 
+Sun’iy neyron tarmoqlarida perceptron tushunchasi? 
+==== 
+# 
+bu ikkita qatlamdan iborat ya’ni kiruvchi va chiquvchi qatlamdan iborat bo’lgan neyronni hisoblash tugunidir.  ==== 
+bu ikkita qatlamdan iborat ya’ni kiruvchi va faollashtish qatlamdan iborat bo’lgan neyronni hisoblash tugunidir.  ==== bu bir qatlamdan iborat bo’lgan neyronni hisoblash tugunidir. 
+==== bu uch qatlamdan iborat bo’lgan neyronni hisoblash tugunidir. +++++ 
+ 
+Sun’iy neyron tarmoqlarida yashirin qatlam  tushunchasi? 
+==== 
+# 
+Kiruvchi va chiquvchi qatlamlar orasida joylashadigan neyron  
+==== 
+Ko’rinmaydigan qatlam 
+==== 
+Neyron tarmoqda yashirin qatlam tushunchasi yo’q 
+==== 
+Kiruvchi qatlamdan kiyin keladigan barcha qatlamalar 
+ 
++++++ 
+ 
+Sun’iy neyron tarmoqlarida aktivlashtirish funksiyasi  tushunchasi? 
+==== 
+# 
+Neyron tugunlaridan chiqqan qiymatni ma’lum bir diapozonga tushirish uchun ishlatiladi 
+==== 
+Neyron tarmoqda aktivlashtirish funksiyasi tushunchasi yo’q 
+==== 
+Bu faol bo’lmagan tugunlarni faollashtish uchun ishlatiladi. 
+==== 
+To’g’ri javob yoq 
+ 
++++++ 
+ 
+Chuqur o’qitilish deyiladi, qachonki … 
+==== 
+# 
+Nayron tarmog’imizda yashirin qatlamlar soni bittadan ko’p bo’lsa. 
+==== 
+Nayron tarmog’imizda yashirin qatlamlar soni bitta bo’lsa. 
+==== 
+Ikkita neyron orasidagi masofa katta bo’lsa 
+==== 
+Neyronlar soni ikkitadan ko’p bo’lsa 
+ 
++++++ 
+ 
+CIFAR100 dataset da nechta sinfga tegishli obyektlarni ma’lumotlari bor 
+==== 
+# 
+100 
+==== 
+99 
+==== 
+10 
+==== 
+2 
+ 
++++++ 
+ 
+Neyron tarmoq asosida sinflashtirish masalasini yechish mumkinmi?  
+==== 
+# 
+Ha 
+==== 
+Yoq, faqat regressiya masalasini yechadi. 
+==== 
+Faqat ikkilik sinflashtirganda 
+==== 
+Yoq, klasterlash masalasini yechadi. 
+ 
++++++ 
+ 
+Python muhitida chiziqli regression model qurish uchun ishlatiladigan stats.linregress(x,y) funksiyasi nechta qiymat qaytaradi  
+==== 
+# 
+5 
+==== 
+4 
+==== 
+3 
+==== 
+2 
+ 
++++++ 
+ 
+Neyron tarmoqda tugunlar nimalar bilan bog’lanadi  
+==== 
+# og’irlik koeffitsentlari 
+==== o’zgarmas koeffitsentlar 
+==== tasodifiy koeffitsentlar 
+==== 
+ozod had koeffitsentlari 
+ 
++++++ 
+ 
+Qanday turdagi faollashtirish funksiyadan neyron tarmoqda foydalaniladi 
+==== 
+# 
+Barchasi to’g’ri  
+==== 
+ReLU ==== softmax ==== 
+Sigmoid 
+ 
++++++ 
+ 
+Neyron tarmoqdagi tugun qiymati 5 ga teng. Ushbu tugun ReLU funksiyasi yordamida faollashtirilsa qanday qiymatga o‟zgaradi  
+==== 
+# 
+5 
+==== 
+4 
+==== 
+0 
+==== 
+44682 
+ 
++++++ 
+ 
+Neyron tarmoqdagi tugun qiymati -5 ga teng. Ushbu tugun ReLU funksiyasi yordamida faollashtirilsa qanday qiymatga o‟zgaradi 
+==== 
+# 
+0 
+==== 
+44682 
+==== 
+5 
+==== 
+-5 
+ 
++++++ 
+ 
+Neyron tarmoqdagi tugun qiymati 0 ga teng. Ushbu tugun sigmoid funksiyasi yordamida faollashtirilsa qanday qiymatga o’zgaradi 
+==== 
+# 
+0.5 
+==== 
+0 
+==== 
+1 
+==== 
+2.785661 
+ 
++++++ 
+ 
+Hozirgi kunda butun dunyoda rivojlanib borayotgan mashinali o’qitish (machine learning), chuqur o’qitish (deep learning) kabi usullar sun’iy intellekt bilan qanday bog’liq  
+==== 
+# 
+hozirda tasvirlardan ob’ektlarni tanib olish,  video nazorat, ovozni tanib olish kabi sohalarda keng foydalaniladi va sun’iy intellekt tizimini yaratishda katta ahamiyat kasb etadi 
+==== faqat ovozni tanib olishda ishlatiladi va sun’iy intellekt tizimini yaratishda deyarli fodalanilmaydi 
+==== tasvirlarni tanib olishda ishlatiladi va sun’iy intellekt tizimini yaratishda foydalaniladi 
+==== faqatgina ma’lumotlarning intellektual tahliliga oid 
+ 
++++++ 
+ 
+IRIS dataset da nechta sinfga tegishli obyektlarni ma’lumotlari bor 
+==== 
+# 
+3 
+==== 
+2 
+==== 
+10 
+==== 
+2 
+ 
++++++ 
+ 
+Chuqur o’qitish qanday tarmoqlari asosida amalga oshiriladi?  
+==== 
+# 
+neyron tarmoqlar asosida 
+==== lokal tarmoqlar asosida 
+==== global tarmoqlar asosida 
+==== internet tarmoqlar asosida 
+ 
++++++ 
+ 
+Chuqur o’qitish necha asosiy bosqichlardan tashkil topgan?  
+==== 
+# 
+5 
+==== 
+4 
+==== 
+3 
+==== 
+6 
+ 
++++++ 
+ 
+Chuqur o’qitishning birinchi bosqichi qanday jarayondan iborat?  
+==== 
+# 
+Muammoni tushunib olish. 
+==== 
+Ma’lumotlarni aniqlash. 
+==== 
+Chuqur o’qitish algoritmini belgilash. 
+==== 
+Modelni o’qitish. 
+ 
++++++ 
+ 
+Chuqur o’qitishning ikkinchi bosqichi qanday jarayondan iborat?  
+==== 
+# 
+Ma’lumotlarni aniqlash. 
+==== 
+Chuqur o’qitish algoritmini belgilash. 
+==== 
+Modelni o’qitish. 
+==== 
+Modelni testlash. 
+ 
++++++ 
+ 
+Chuqur o’qitishning uchunchi bosqichi qanday jarayondan iborat?  
+==== 
+# 
+Chuqur o’qitish algoritmini belgilash. 
+==== 
+Modelni testlash. 
+==== 
+Muammoni tushunib olish. 
+==== 
+Modelni o’qitish. 
+ 
++++++ 
+ 
+Chuqur o’qitishning turtinchi bosqichi qanday jarayondan iborat?  
+==== 
+# 
+Modelni o’qitish. 
+==== 
+Modelni testlash. 
+==== 
+Chuqur o’qitish algoritmini belgilash. 
+==== 
+Muammoni tushunib olish. 
+ 
++++++ 
+ 
+Chuqur o’qitishning oxirgi bosqichi qanday jarayondan iborat?  
+==== 
+# 
+Modelni testlash. 
+==== 
+Chuqur o’qitish algoritmini belgilash. 
+==== 
+Modelni o’qitish. 
+==== 
+Ma’lumotlarni aniqlash. 
+ 
++++++ 
+ 
+MNIST dataset da nechta sinfga tegishli obyektlarni ma’lumotlari bor 
+==== 
+# 
+10 
+==== 
+9 
+==== 
+100 
+==== 
+3 
+ 
++++++ 
+ 
+CIFAR10 dataset da nechta sinfga tegishli obyektlarini ma’lumotlari bor 
+==== 
+# 
+10 
+==== 
+9 
+==== 
+100 
+==== 
+3 
+ 
++++++ 
+ 
+CIFAR10 datasetda tasvirlarning o’lchami qaysi o’lchamda  
+==== 
+# 
+To’g’ri javob yo’q 
+==== 
+28x28 
+==== 
+128x128 
+==== 
+64x64 
+ 
++++++ 
+ 
+CIFAR10 datasetda necha tanlama bor 
+==== 
+# 
+60000 
+==== 
+70000 
+==== 
+50000 
+==== 
+10000 
+ 
++++++ 
+ 
+Chiziqli regression modelni qurib bo’lganimizdan so’ng modelni train dataset bilan testlanganda 95% aniqliq va test dataset bilan testlaganimizda 55% aniqlik bersa, qaysi turdagi mauammo sodir bo’lmoqda ==== 
+# 
+Owerfitting 
+==== 
+Model ishonchli, hech qanaday muammo yo’q 
+==== 
+Underfitting 
+==== 
+Everfitting 
+ 
++++++ 
+ 
+Chiziqli regression modelni qurib bo’lganimizdan so’ng modelni train dataset bilan testlanganda 95% aniqliq va test dataset bilan testlaganimizda 92% aniqlik bersa, qaysi turdagi mauammo sodir bo’lmoqda. 
+==== 
+# 
+Model ishonchli, hech qanaday muammo yo’q 
+==== 
+Underfitting 
+==== 
+Owerfitting 
+==== 
+Everfitting 
+ 
++++++ 
+ 
+Python ning qaysi kutubxona oraqli vector va matritsalar ustida amalar bajarish mumkin  
+==== 
+# 
+Numpy 
+==== 
+Math 
+==== 
+Pandas 
+==== 
+VecMat 
+ 
++++++ 
+ 
+Ochiq datasetlarni qidirishga mo’ljallangan tizim qaysi? 
+==== 
+# 
+Barchasi to’g’ri 
+==== 
+UCI Machine Learning Repository 
+==== 
+VisualData 
+==== 
+Google Dataset Search 
+ 
++++++ 
+ 
+Pandas kutubxonasida head() funksiyasi nima vazifa bajaradi? 
+==== 
+# 
+To’plamning dastlabgi bir nechta(5ta) satrini olib beradi. 
+==== 
+To’plamning ustunlar nomini olib beradi. 
+==== 
+To’plamning ustunlar nomisiz  bir nechta  satrini olib beradi. 
+==== 
+To’g’ri javob yo’q 
+ 
++++++ 
+ 
+Pythonda funksiya e’lon qilish uchun qaysi kalit so’zidan foydalaniladi? ==== 
+# def ==== function ==== void ==== define 
+ 
++++++ 
+ 
+Neyron tarmoqlarida dastlab vazn koeffitsentlari qanday bo’ladi? 
+==== 
+# random() funksiyasi orqali taxminiy beriladi. 
+==== 
+musbat qiymatlar bilan to’ldiriladi. 
+==== 
+To’ldirish shart emas. ==== manfiy qiymatlar bilan to’ldiriladi. 
+ 
++++++ 
+ 
+Neyron tarmoqlarida topilgan vazn koeffitsentlari qanday bo’ladi? 
+==== 
+# 
+Musbat va manfiy bo’lishi mumkin 
+==== 
+Faqat musbat bo’ladi 
+==== 
+Faqat manfiy bo’ladi 
+==== 
+Qiymatlar [0,1] oraliqda bo’ladi. 
+ 
++++++ 
+ 
+Unsupervised learning ? 
+==== 
+# bu modelni xususiyatlari aniq  bo’lmagan ma’lumotlar  bilan  o’qitish 
+==== bu modelni xususiyatlari  aniq bo’lgan  ma’lumotlar bilan  o’qitish 
+==== bu modelni  ham aniq ham aniq  bo’lmagan xususiyatli  ma’lumotlar bilan  o’qitishdir. 
+==== 
+bu  o’qitishning mukammal  usuli bo’lib, bunda  model o’zini-o’zi qayta  o’qitish va natijalarni  yaxshilash imkoniyatiga  ega bo’ladi. 
+ 
++++++ 
+ 
+Semi- supervised learning  
+==== 
+# bu modelni  ham aniq ham aniq  bo’lmagan xususiyatli  ma’lumotlar bilan  o’qitishdir. 
+==== bu modelni xususiyatlari aniq  bo’lmagan ma’lumotlar  bilan  o’qitish 
+==== bu modelni xususiyatlari  aniq bo’lgan  ma’lumotlar bilan  o’qitish 
+==== 
+bu  o’qitishning mukammal  usuli bo’lib, bunda  model o’zini-o’zi qayta  o’qitish va natijalarni  yaxshilash imkoniyatiga  ega bo’ladi. 
+ 
++++++ 
+ 
+Reinforcement learning ? 
+==== 
+# 
+bu  o’qitishning mukammal  usuli bo’lib, bunda  model o’zini-o’zi qayta  o’qitish va natijalarni  yaxshilash imkoniyatiga  ega bo’ladi. 
+==== bu modelni xususiyatlari aniq  bo’lmagan ma’lumotlar  bilan  o’qitish 
+==== bu modelni  ham aniq ham aniq  bo’lmagan xususiyatli  ma’lumotlar bilan  o’qitishdir. 
+==== bu modelni xususiyatlari  aniq bo’lgan  ma’lumotlar bilan  o’qitish 
+ 
++++++ 
+ 
+O’qitishning mukammal  usuli bo’lib, bunda  model o’zini-o’zi qayta  o’qitish va natijalarni  yaxshilash imkoniyatiga  ega bo’ladi. 
+==== 
+# 
+Reinforcement learning  
+==== 
+Semi-supervised learning  
+==== 
+Supervised learning 
+==== 
+Unsupervised learning 
+ 
++++++ 
+ 
+Modelni xususiyatlari  aniq bo’lgan  ma’lumotlar bilan  o’qitish 
+==== 
+# 
+Supervised learning 
+==== 
+Semi-supervised learning  
+==== 
+Reinforcement learning 
+==== 
+Unsupervised learning 
+ 
++++++ 
+ 
+IRIS dataset da nechta sinfga tegishli obyektlarni ma’lumotlari bor 
+==== 
+# 
+3 
+==== 
+2 
+==== 
+10 
+==== 
+2 
+ 
++++++ 
+ 
+CIFAR10 datasetda tasvirlarning o’lchami qaysi o’lchamda  
+==== 
+# 
+To’g’ri javob yo’q 
+==== 
+28x28 
+==== 
+128x128 
+==== 
+64x64 
+ 
++++++ 
+ 
+CIFAR10 datasetda necha tanlama bor 
+==== 
+# 
+60000 
+==== 
+70000 
+==== 
+50000 
+==== 
+10000 
+ 
++++++ 
+ 
+CIFAR100 dataset da nechta sinfga tegishli obyektlarni ma’lumotlari bor 
+==== 
+# 
+100 
+==== 
+99 
+==== 
+10 
+==== 
+2 
+ 
++++++ 
+ 
+Modelni  ham aniq ham aniq  bo’lmagan xususiyatli  ma’lumotlar bilan  o’qitishdir. 
+==== 
+# 
+Semi-supervised learning  
+==== 
+Reinforcement learning 
+==== 
+Unsupervised learning 
+==== 
+Supervised learning 
+ 
++++++ 
+ 
+IRIS dataset da obyektni xarakterlovchi  xususiyatlari nechta 
+==== 
+# 
+4 
+==== 
+2 
+==== 
+3 
+==== 
+8 
+ 
++++++ 
+ 
+Pythonda massivni e’lon qilish uchun qanday toifalardan foydalaniladi? 
+==== 
+# array, matrix ==== 
+tuple, arr 
+==== 
+list, tuple 
+==== 
+arr, list 
+ 
++++++ 
+ 
+Supervised learning ? 
+==== 
+# bu modelni xususiyatlari  aniq bo’lgan  ma’lumotlar bilan  o’qitish 
+==== bu modelni xususiyatlari aniq  bo’lmagan ma’lumotlar  bilan  o’qitish 
+==== bu modelni  ham aniq ham aniq  bo’lmagan xususiyatli  ma’lumotlar bilan  o’qitishdir. 
+==== 
+bu  o’qitishning mukammal  usuli bo’lib, bunda  model o’zini-o’zi qayta  o’qitish va natijalarni  yaxshilash imkoniyatiga  ega bo’ladi. 
+ 
++++++ 
+ 
+Unsupervised learning ? 
+==== 
+# bu modelni xususiyatlari aniq  bo’lmagan ma’lumotlar  bilan  o’qitish 
+==== 
+bu modelni xususiyatlari  aniq bo’lgan  ma’lumotlar bilan  o’qitish 
+==== bu modelni  ham aniq ham aniq  bo’lmagan xususiyatli  ma’lumotlar bilan  o’qitishdir. 
+==== 
+bu  o’qitishning mukammal  usuli bo’lib, bunda  model o’zini-o’zi qayta  o’qitish va natijalarni  yaxshilash imkoniyatiga  ega bo’ladi. 
+ 
++++++ 
+ 
+Semi- supervised learning  
+==== 
+# bu modelni  ham aniq ham aniq  bo’lmagan xususiyatli  ma’lumotlar bilan  o’qitishdir. 
+==== bu modelni xususiyatlari aniq  bo’lmagan ma’lumotlar  bilan  o’qitish 
+==== bu modelni xususiyatlari  aniq bo’lgan  ma’lumotlar bilan  o’qitish 
+==== 
+bu  o’qitishning mukammal  usuli bo’lib, bunda  model o’zini-o’zi qayta  o’qitish va natijalarni  yaxshilash imkoniyatiga  ega bo’ladi. 
+ 
++++++ 
+ 
+Reinforcement learning ? 
+==== 
+# 
+bu  o’qitishning mukammal  usuli bo’lib, bunda  model o’zini-o’zi qayta  o’qitish va natijalarni  yaxshilash imkoniyatiga  ega bo’ladi. 
+==== bu modelni xususiyatlari aniq  bo’lmagan ma’lumotlar  bilan  o’qitish 
+==== bu modelni  ham aniq ham aniq  bo’lmagan xususiyatli  ma’lumotlar bilan  o’qitishdir. 
+==== bu modelni xususiyatlari  aniq bo’lgan  ma’lumotlar bilan  o’qitish 
+ 
++++++ 
+ 
+O’qitishning mukammal  usuli bo’lib, bunda  model o’zini-o’zi qayta  o’qitish va natijalarni  yaxshilash imkoniyatiga  ega bo’ladi. 
+==== 
+# 
+Reinforcement learning  
+==== 
+Semi-supervised learning  
+==== 
+Supervised learning 
+==== 
+Unsupervised learning 
+ 
++++++ 
+ 
+Logistik regressiyada qaror qabul qilishimiz uchun modeldan olingan qiymat qaysi bo’sag’a qiymati orqali solishtiriladi? 
+==== 
+# 
+0.5 
+==== 
+0 
+==== 
+1 
+==== 
+-1 va 1 
+ 
++++++ 
+ 
+Pythonda ikkita vektorni birlashtirishda xatolik sodir bo’ladigan javobni tanlang 
+==== 
+# a=append(a,b) ==== a=np.append(a,b) 
+==== a=np.append(b,a) 
+==== 
+Varinatlarning barchasida vektorlar birlashtiriladi 
+ 
++++++ 
+ 
+&gt;&gt;a=[1,5,’ML’,False]<br> 
+&gt;&gt;print(type(a)) 
+==== 
+# class 'list' 
+==== 
+class ‘tuple’ ==== 
+class ‘array’ ==== 
+class 'dec' 
+ 
++++++ 
+ 
+Cost funksiya bu? 
+==== 
+# 
+Modelni o’qitish davrida model tomonidan topilgan qiymat bilan o’rgatuvchi tanlamada berilgan qiymat oralidagi farqlarni hisoblash funksiyasi 
+==== 
+Cosinius funksiyasini qisqartma ko’rinishi?  
+==== 
+Bunday nomdagi funksiya yo’q.  
+==== 
+Modelni testlash davrida model tomonidan topilgan qiymat bilan o’rgatuvchi tanlamada berilgan qiymat oralidagi farqlarni hisoblash funksiyasi 
+ 
++++++ 
+ 
+Chiziqli regression model nechta qiymat qaytaradi 
+==== 
+# 
+Har doim bitta 
+==== 
+Ixtiyoriy ravishdagi sonda qiymat qaytarishi mumkin 
+==== 
+Har doim bittadan ko’p 
+==== 
+To’g’ri javob yo’q 
+ 
++++++ 
+ 
+QR code mashinali o’qitilish algoritmi asosida ishlab chiqilgan ? 
+==== 
+# 
+Noto’g’ri, 
+==== 
+To’g’ri 
+==== 
+Bo’lishi mumkin 
+==== 
+Bilmayman 
+ 
++++++ 
+ 
+Gradient tushish bu? 
+==== 
+# 
+Model parametrlarini sozlash uchun ishlatiladigan algoritm 
+==== 
+Xatolik funksiyasi 
+==== 
+Kiruvchi ma’lumotlarni narmallashtirish uchun qiymatlarni 0,1oraliqqa tushirish ====
+Mashinali o’qitish turi 
+ 
++++++ 
+ 
+O’qitish jarayonida regulyarizatsiyalash bu? 
+==== 
+# 
+Modelni o’qitish jarayonida ortiqcha paramertlardan ozod qilish, qisqartirish  
+==== 
+Barcha javob to’g’ri 
+==== 
+Modelni testlash jarayonida ortiqcha paramertlardan ozod qilish, qisqartirish 
+==== 
+Modelni qurish jarayonida ortiqcha paramertlardan ozod qilish, qisqartirish 
+ 
++++++ 
+O’ratuvchi tanlamadagi val (validation) to’plam bu? 
+==== 
+# 
+Modelni o’qitish davomida model parametrlarini sozlash uchun ishlatiladi 
+==== modelni o’qitish uchun ishlatiladi 
+==== 
+modelni testlash uchun ishlatiladi 
+==== 
+Bu turdagi o’rgatuvchi tanlamadan foydalanilmaydi 
+ 
++++++ 
+ 
+Bias va Variance tushunchalarining farqi nimada? 
+==== 
+# 
+Bias modelni train to’plam bilan testlagandagi xatolik, Variance esa test to’plam bilan testlagandagi xatolik 
+==== 
+Bias modelni test to’plam bilan testlagandagi xatolik, Variance esa train to’plam bilan testlagandagi xatolik 
+==== 
+Bias modelni train +test to’plam bilan testlagandagi umumiy xatolik, Variance esa faqat test to’plam bilan testlagandagi xatolik 
+==== 
+Bias modelni train +test to’plam bilan testlagandagi umumiy xatolik, Variance esa faqat train to’plam bilan testlagandagi xatolik 
+ 
++++++ 
+ 
+Agar bias yuqori bo’lsa qaysi turdagi muammo sodir bo’lmoqda? 
+==== 
+# 
+Underfitting 
+==== 
+Owerfitting 
+==== 
+Bias ni yuqoriligi mumamo hisoblanmaydi 
+==== 
+Model juda murakkab 
+ 
++++++ 
+ 
+Agar Variance yuqori bo’lsa qanday turdagi muammo sodir bo’lmoqda? 
+==== 
+# 
+Owerfitting 
+==== 
+Underfitting 
+====
+Variance ni yuqoriligi mumamo hisoblanmaydi 
+==== 
+Model juda sodda 
+ 
++++++ 
+ 
+Agar biass quyi va variance yuqori bo’lsa qanday turdagi muammo sodir bo’lmoqda? 
+==== 
+# 
+Owerfitting 
+==== 
+Underfitting 
+==== 
+Bias ni quyi variance ni yuqoriligi mumamo hisoblanmaydi 
+==== 
+Model juda sodda 
+ 
++++++ 
+ 
+Model murakkab bo’lsa bias qanday bo’ladi? 
+==== 
+# 
+Quyi, model o’rgatuvchi tanlamaga mostlashib qoladi va train to’plamda xatoligi past bo’ladi ==== 
+To’g’ri javob yo’q 
+==== 
+Bias ning quyi yoki yuqori bo’lishi model murakkabligiga bog’liq emas. 
+==== 
+Yuqori, model o’rgatuvchi tanlamaga mostlashib qoladi va train to’plamda xatoligi yuqori bo’ladi 
+ 
++++++ 
+ 
+Model murakkab bo’lsa variance qanday bo’ladi? 
+==== 
+# 
+Yuqori, model o’rgatuvchi tanlamaga mostlashib qoladi va test to’plamda xatoligi yuqori bo’ladi ==== 
+Quyi, model o’rgatuvchi tanlamaga mostlashib qoladi va test to’plamda xatoligi past bo’ladi ==== 
+To’g’ri javob yo’q 
+==== 
+Variance ning quyi yoki yuqori bo’lishi model murakkabligiga bog’liq emas. 
+ 
++++++ 
+ 
+KNN algoritmida k qiymat nimani xaratterlaydi? 
+==== 
+# k ta eng yaqin qo’shnini 
+==== k ta eng uzoq qo’shnini 
+==== 
+O’qitish qadami 
+==== 
+O’qitishlar sonini 
+ 
++++++ 
+ 
+Model qurish uchun o’rgatuvchi tanalaga qaysi nisbatda bo’linsa maqsadga muoffiq bo’ladi? 
+==== 
+# 
+Train - 75% 
+Val - 15 % 
+Test - 10% 
+==== 
+Train - 50% 
+Test - 50% 
+  
+==== 
+Train - 50% 
+Val - 25 % 
+Test - 25% 
+==== 
+Train - 75% 
+Val - 25 % 
+  
+ 
++++++ 
+ 
+O’rgatuvchi tanlamada normallashtirish tushunchasi bu? 
+==== 
+# 
+O’ratuvchi tanlamdagi qiymatlarni bir xil shkalaga o’tkazish 
+==== 
+O’ratuvchi tanlamdagi qiymatlarni turli xil shkalaga o’tkazish 
+==== 
+O’ratuvchi tanlamdagi qiymatlarni faqat [0,1] shkalaga o’tkazish 
+==== 
+O’ratuvchi tanlamdagi qiymatlarni faqat [-1,1] shkalaga o’tkazish 
+ 
++++++ 
+ 
+Logistik regressiya masalasida asosan qaysi aktivlashtirish funksiyasidan foydalaniladi? 
+==== 
+# 
+Sigmoid 
+==== Tanh 
+==== 
+ReLU 
+==== 
+Sigmoid va ReLU 
+ 
++++++ 
+ 
+Nima uchun o’rgatuvchi tanlama normallashtiriladi? 
+==== 
+# 
+Obyektni xarakterlovchi xususiyatlari bir xil shkalaga olib kelish orqali ularning ta’sir kuchini barobarlashtirish 
+==== 
+Obyektni xarakterlovchi xususiyatlari faqat [0,1] shkalaga olib kelish orqali ularning ta’sir kuchini barobarlashtirish 
+==== 
+Obyektni xarakterlovchi xususiyatlari faqat [-1,1] shkalaga olib kelish orqali ularning ta’sir kuchini barobarlashtirish 
+==== 
+Obyektni xarakterlovchi xususiyatlari turli xil shkalaga olib kelish orqali ularning ta’sir kuchini barobarlashtirish 
+ 
++++++ 
+ 
+Validation dataset qayerda ishlatiladi? 
+==== 
+# 
+Modelni qurish davomida paramertlarni sozlashda 
+==== 
+Model qurib bo’linganidan so’ng aniqlikni baholashda 
+==== 
+To’g’ri javob yo’q 
+==== 
+Validation datasetdan foydalanilmaydi 
+ 
++++++ 
+ 
+Klasterlash bu ? 
+==== 
+# 
+O’qituvchisiz o’qitish algoritmi asosida obyektlarni xarakterlovchi o’xshash xususiyatlari asosida guruhlash 
+==== 
+O’qituvchili o’qitish algoritmi asosida obyektlarni xarakterlovchi o’xshash xususiyatlari asosida guruhlash ==== 
+Mashinali o’qitishda buday tushuncha yo’q. 
+==== 
+Logistik regressiya asosida amalga oshiriladigan mashinali o’qitish algoritmi 
+ 
++++++ 
+ 
+O’qituvchisiz o’qitish algoritmiga qaysi algoritim kiradi? 
+==== 
+# 
+Kmaens 
+Singular Value Decomposition 
+==== 
+KNN 
+SVM 
+==== 
+SVM 
+Kmaens 
+==== 
+Random Forest 
+ 
++++++ 
+ 
+Nima uchun logistik regressiyada sigmoid funksiyadan foydalaniladi? 
+==== 
+# qiymatlarni (0,1) oraliqda keltirish 
+==== qiymatlarni [-1,1] oraliqda keltirish 
+==== 
+qiymatlarni [0,1] oraliqda keltirish 
+==== qiymatlarni (-1,1) oraliqda keltirish 
+ 
++++++ 
+ 
+Logistik regressiyada qaror chegrasi uchun topilgan modeldan  olingan qiymat qaysi bo’sag’a qiymati orqali solishtiriladi va qaror qabul qilinadi? 
+==== 
+# 
+0 
+==== 
+1 
+==== 
+0.5 
+==== 
+-1 va 1 
+ 
++++++ 
+ 
+SVM algoritmida suppor vectors bu? 
+==== 
+# 
+Sinflashtirishnig chegara sohasi bo’lib, eng yaqin tanlanmalar uni xarakterlaydi 
+==== 
+Sinflashtirishnig chegara sohasi bo’lib, eng uzoq tanlanmalar uni xarakterlaydi 
+==== 
+Sinflashtirishnig chegara sohasi bo’lib, eng yaqin tanlanmalar uni xarakterlamaydi 
+==== 
+Sinflashtirishnig chegara sohasi bo’lib, eng uzoq tanlanmalar uni xarakterlamaydi 
+ 
++++++ 
+ 
+SVM algoritmidagi hisoblaanadigan orqaliq (margin) qanday bo’lsa model ishonchli deb topiladi? 
+==== 
+# 
+Oraliq eng kattta bo’lsa 
+==== 
+Oraliq eng kichik bo’lsa 
+==== 
+Oraliq hech narsani anglatmaydi 
+==== 
+To’gri javob yo’q 
+ 
++++++ 
+ 
+SVM algoritmida yadro(kernel) funksiyalari nima uchun xizmat qiladi? 
+==== 
+# 
+Kiruvchi xususiyatlarni ma’lum o’lchov sohasidan boshqasiga o’zgartirish uchun xizmat qiladi. Misol uchun 1D -&gt; 2D 
+==== 
+Kiruvchi xususiyatlarni 1D o’lchov sohasidan 2D o’lchov sohasiga o’tkazish uchun xizmat qiladi 
+==== 
+Kiruvchi xususiyatlarni 2D o’lchov sohasidan 1D o’lchov sohasiga o’tkazish uchun xizmat qiladi ==== 
+Kiruvchi xususiyatlarni 2D o’lchov sohasidan 3D o’lchov sohasiga o’tkazish uchun xizmat qiladi 
+ 
++++++ 
+ 
+SVM orqali .. 
+==== 
+# 
+Faqat bir nechta  sinfga tegishli bo’lgan obyektlar sinflanadi 
+==== 
+Faqat ikkita sinfga tegishli bo’lgan obyektlar sinflanadi 
+==== 
+Faqat regressiya masalasini yechish mumkin 
+==== 
+Ham sinflashrish, ham regressiya masalasini ishlash mumkin. 
+ 
++++++ 
+ 
+Modelni o’qitish uchun o’quv tanlanma (dataset) qanday turlarga bo’lindi  
+==== 
+# training, validation, testing 
+==== testing, value-x, training 
+==== 
+validation, labels, training 
+==== labels, validation, testing 
+ 
++++++ 
+ 
+O’qitish uchun ma’lumotlar orasidan ortiqcha yoki ahamiyati past bo’lgan, model turg’unligiga ta’sir qiluvchi ma’lumotlarni olib tashlash jarayoni nima deb ataladi  
+==== 
+# 
+Ma’lumotlarni tozalash (Data cleaning) 
+==== 
+Xususiyatlarni aniqlash (Feature detection) 
+==== 
+Ma’lumotlarni o’chirish (Data deletion) 
+==== 
+Ma’lumotlar turini aniqlash (Data formatting) 
+ 
++++++ 
+ 
+Neyron tarmoqlarida sinflashtirish masalasini yechishda chiquvchi qatlamda qaysi turdagi aktivlash funksiyasidan foydalaniladi 
+==== 
+# 
+Softmax 
+==== 
+Sigmoid 
+==== 
+ReLu 
+==== 
+To’g’ri javob yo’q 
+ 
++++++ 
+ 
+Logistik regression model nima uchun ishlatiladi 
+==== 
+# 
+Sinflashtirsh masalasini yechish uchun 
+==== 
+Klasterlash masalasini ishlash uchun 
+==== 
+Neyron tarmoqni qurish uchun 
+==== 
+Qiymatni bashoratlash uchun  
+ 
++++++ 
+ 
+Numpy kutubxonasidagi polyfit() funksiyasi nima uchun ishlatiladi? 
+==== 
+# 
+Chiziqli regressiya uchun model paramertlarini aniqlash uchun 
+==== 
+Loginstik  regressiya uchun model paramertlarini aniqlash uchun 
+==== 
+Chiziqli va logistik   regressiya uchun model paramertlarini aniqlash uchun 
+==== 
+Polynom funksiya yaratish uchun 
+ 
++++++ 
+ 
+Numpy kutubxonasidagi poly1d() funksiyasi nima uchun ishlatiladi? 
+==== 
+# 
+Berilgan parametrlar asosida polinomal  funksiya hosil qilish 
+==== 
+Berilgan parametrlar asosida polinomal  Class  hosil qilish 
+==== 
+Berilgan parametrlar asosida logistik regressiya modelini qurish 
+==== 
+Berilgan parametrlar asosida giperbolik  regressiya modelini qurish 
+ 
++++++ 
+ 
+Neyron tarmoqlarini qurishga mo’ljallangan python kutubxonalarini ko'rsating. ==== 
+# 
+Numpy, keras, tensorflow 
+==== 
+Numpy, pandas, keras 
+==== 
+Tensorflow, numpy, pandas 
+==== 
+Python, Matlab, Octave 
+ 
++++++ 
+ 
+
+    </pre>
+</body>
+</html>
